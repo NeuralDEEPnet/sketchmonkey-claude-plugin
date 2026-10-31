@@ -10,6 +10,7 @@ Use these to describe each lens in plain words, to mix lenses, and to write rend
 - **Lighting:** soft overhead studio light with clean specular lines along edges.
 - **Best for:** electronics, audio, tools, kitchen appliances, instruments.
 - **Prompt phrases:** "precise geometric form", "crisp chamfered edges", "honest materials", "single accent colour".
+- **As a render preset:** adds "technically precise, CAD-quality render" with hard-surface materials and studio lighting. Reliable for products.
 
 ## Maya · friendly and ergonomic
 - **Feeling:** approachable, warm, effortless to use.
@@ -19,6 +20,7 @@ Use these to describe each lens in plain words, to mix lenses, and to write rend
 - **Lighting:** wrap-around soft light with a gentle rim glow.
 - **Best for:** handhelds, wearables, smart home, wellness and kids' products.
 - **Prompt phrases:** "soft rounded form", "inviting tactile surfaces", "human-scaled controls".
+- **As a render preset:** adds "clean, purposeful, human-centered design image" and "pixel-perfect detail suitable for product UI/UX". Good for interfaces and screens; on physical products it can add screen-like artefacts such as QR codes, so render physical products with `kai` or `ren` and describe Maya's forms in the prompt.
 
 ## Kai · polished and premium
 - **Feeling:** aspirational and retail-ready; the flagship on the shelf.
@@ -28,6 +30,7 @@ Use these to describe each lens in plain words, to mix lenses, and to write rend
 - **Lighting:** rim-lit infinity cove with long gradient reflections.
 - **Best for:** beauty, fragrance, watches, premium packaging, flagship devices.
 - **Prompt phrases:** "premium retail presentation", "flawless reflections", "precise metallic accents".
+- **As a render preset:** adds "polished, brand-ready commercial image". The safest preset for product photography.
 
 ## Zola · dramatic and sculptural
 - **Feeling:** bold, editorial, a statement object.
@@ -37,6 +40,7 @@ Use these to describe each lens in plain words, to mix lenses, and to write rend
 - **Lighting:** single theatrical key light, deep shadows, light haze.
 - **Best for:** luxury accessories, statement furniture, art objects, fashion.
 - **Prompt phrases:** "sculptural monolithic form", "chiaroscuro lighting", "gallery presentation".
+- **As a render preset:** adds "cinematic, emotionally charged concept art" with dramatic lighting. Expect a more painterly, moody image.
 
 ## Nova · futuristic and organic
 - **Feeling:** experimental and from the near future.
@@ -46,6 +50,7 @@ Use these to describe each lens in plain words, to mix lenses, and to write rend
 - **Lighting:** dual-tone glow, internal light pipes, soft volumetric light.
 - **Best for:** concept gear, footwear, gaming, sci-fi looks, trade-show showpieces.
 - **Prompt phrases:** "biomimetic lattice structure", "flowing organic form", "luminous accents".
+- **As a render preset:** adds "experimental, boundary-pushing surreal image" and asks for glitch aesthetics. Use it when the person wants experimental art; for a clean futuristic product render, use `ren` and describe Nova's forms and materials in the prompt.
 
 ## Mixing lenses
 

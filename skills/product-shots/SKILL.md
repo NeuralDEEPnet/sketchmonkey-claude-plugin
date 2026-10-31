@@ -60,8 +60,13 @@ Then call `render_concept` with:
 
 - `prompt`: the full prompt above. Repeat the whole fingerprint in every prompt so the set stays consistent.
 - `autoEnhance: false`. Your prompt is already complete; automatic enhancement adds generic lens materials that can change the product.
-- `preset`: the lens that fits the mood. Use `kai` for premium retail polish, `ren` for clean technical products, `maya` for warm and friendly homeware, `zola` for drama and luxury, `nova` for futuristic looks. Default to `kai` for e-commerce.
-- `aspectRatio`: from the table above.
+- `preset`: each lens adds its own style words to the prompt at render time, even with `autoEnhance: false`, so choose deliberately:
+  - `kai` adds polished, brand-ready commercial styling. Use it for e-commerce, hero shots and packshots (the default).
+  - `ren` adds precise, CAD-quality hard-surface rendering. Use it for technical products.
+  - Leave `preset` out for lifestyle scenes, so your prompt alone sets the look.
+  - `zola` adds cinematic drama. Use it only for moody key visuals.
+  - Avoid `maya` for photographs: it asks for product UI/UX detail and can add screen-like artefacts such as QR codes. Avoid `nova` unless the person wants experimental art: it adds deliberate glitch effects.
+- `aspectRatio`: from the table above. For `1:1`, also write "square 1:1 format" in the prompt; the server only adds ratio wording for non-square images, so square requests can otherwise come back in another shape.
 - `subjectModelId`: only if the product was saved as a reference (Step 5).
 
 For a set of shots, start all renders first, then poll each job; they run in parallel.
@@ -109,6 +114,8 @@ Afterwards pass the returned ID or handle as `subjectModelId` on later `render_c
 | Looks plastic or too CGI | Add "photographed, natural material texture, subtle imperfections, realistic contact shadow". |
 | Busy background | Add "minimal styling, a single prop at most, clean background". |
 | Product too small | Add "product fills about 70% of the frame". |
+| QR codes, screens, interface panels or glitch debris | Use `kai` or no `preset`, and add "no QR codes, no screens, no interface elements". |
+| Wrong shape (for example a square request came back wide) | Write "square 1:1 format" (or the ratio you need) in the prompt as well as in `aspectRatio`. |
 
 ## Boundaries
 

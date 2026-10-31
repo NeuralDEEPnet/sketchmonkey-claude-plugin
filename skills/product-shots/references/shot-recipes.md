@@ -33,7 +33,7 @@ Each recipe gives the parts of a render prompt that follow the product fingerpri
 - **Lens:** 50mm, f/2.8, product sharp, background gently soft.
 - **Composition:** product clearly the subject, filling about a third of the frame.
 - **Ratio:** `3:2`, or `3:4` for social feeds.
-- **Lens preset:** `maya` for homes and wellness, `kai` for premium, `zola` for moody luxury.
+- **Lens preset:** none, so the scene description sets the look; `kai` for a premium feel, `zola` for moody luxury. Avoid `maya` and `nova` for photographs.
 
 ## More shots
 

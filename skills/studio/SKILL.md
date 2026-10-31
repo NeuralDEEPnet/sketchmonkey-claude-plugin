@@ -49,7 +49,7 @@ Shortcuts:
 
 ## 4. The five design lenses
 
-Every render can be styled through one of five lenses. Introduce them by look, with the name as a label.
+Every render can be styled through one of five lenses. Introduce them by look, with the name as a label. A lens used as a render `preset` adds its own style words to the prompt, so the `product-shots` and `explore-concepts` skills say which preset suits which kind of image.
 
 | Lens | In plain words | Great for |
 |---|---|---|
@@ -57,7 +57,7 @@ Every render can be styled through one of five lenses. Introduce them by look, w
 | Maya | Friendly, soft and ergonomic, made for hands and homes | Handhelds, wearables, home and wellness products |
 | Kai | Polished, premium and retail-ready | Beauty, watches, packaging, flagship launches |
 | Zola | Dramatic, sculptural and editorial | Luxury goods, statement furniture, fashion accessories |
-| Nova | Futuristic, organic and experimental | Concept gear, footwear, sci-fi looks |
+| Nova | Futuristic, organic and experimental; its renders deliberately add surreal, glitch-art effects | Concept gear, footwear, experimental art |
 
 ## 5. Showing finished work
 

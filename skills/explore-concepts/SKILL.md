@@ -40,9 +40,9 @@ For each chosen lens, write the prompt yourself:
 
 Call `render_concept` with:
 - `prompt`: the prompt above.
-- `preset`: the lens ID (`ren`, `maya`, `kai`, `zola` or `nova`).
+- `preset`: the lens ID (`ren`, `maya`, `kai`, `zola` or `nova`). The preset adds its own style words at render time: `nova` deliberately adds glitch-art and surreal effects, and `maya` asks for product UI/UX detail, which can add screen-like artefacts such as QR codes on physical products. If the person wants the clean look of the Nova or Maya direction rather than that render style, use `preset: "ren"` (or `"kai"`), describe the direction's design language in the prompt, and say that you did.
 - `autoEnhance: false`, because the prompt is complete.
-- `aspectRatio`: `1:1` for most objects, `16:9` for vehicles and wide products, `3:4` for tall products.
+- `aspectRatio`: `1:1` for most objects, `16:9` for vehicles and wide products, `3:4` for tall products. For `1:1`, also write "square 1:1 format" in the prompt; the server only adds ratio wording for non-square images.
 
 Quick alternative when the person just wants a fast look: send their plain brief with the lens `preset` and leave `autoEnhance` on. Never send text from `enhance_prompt` with `autoEnhance` on; that enhances it twice.
 
