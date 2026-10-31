@@ -1,0 +1,29 @@
+{
+  "name": "sketchmonkey",
+  "displayName": "SketchMonkey Design Studio",
+  "version": "1.0.0",
+  "description": "Your product design studio inside Claude. Turn a product, photo or idea into studio-quality product shots, five design directions, colour-material-finish boards, launch campaigns and 360° videos, rendered through your SketchMonkey account.",
+  "author": {
+    "name": "Neural Deep Network Ltd",
+    "email": "3d@neuraldeep.net",
+    "url": "https://www.sketchmonkey.design"
+  },
+  "homepage": "https://www.sketchmonkey.design",
+  "repository": "https://github.com/NeuralDEEPnet/sketchmonkey-claude-plugin",
+  "license": "MIT",
+  "keywords": [
+    "product-photography",
+    "product-design",
+    "industrial-design",
+    "cmf",
+    "concept-art",
+    "marketing-campaign",
+    "product-video",
+    "ecommerce"
+  ],
+  "icon": "./assets/icon.png",
+  "documentationUrl": "https://www.sketchmonkey.design/mcp-server",
+  "supportUrl": "https://www.sketchmonkey.design/support",
+  "privacyPolicyUrl": "https://www.sketchmonkey.design/privacy",
+  "termsOfServiceUrl": "https://www.sketchmonkey.design/terms"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "neuraldeep",
+  "description": "Claude plugins from Neural Deep Network Ltd.",
+  "owner": {
+    "name": "Neural Deep Network Ltd",
+    "email": "3d@neuraldeep.net",
+    "url": "https://www.sketchmonkey.design"
+  },
+  "plugins": [
+    {
+      "name": "sketchmonkey",
+      "source": "./",
+      "description": "SketchMonkey Design Studio: product shots, design directions, CMF boards, launch campaigns and 360° videos, rendered through your SketchMonkey account.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Neural Deep Network Ltd"
+      },
+      "homepage": "https://www.sketchmonkey.design",
+      "category": "design",
+      "license": "MIT"
+    }
+  ]
+}

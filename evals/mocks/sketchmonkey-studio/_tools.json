@@ -1,0 +1,320 @@
+{
+  "tools": [
+    {
+      "name": "create_project",
+      "title": "Create Creative Project",
+      "description": "Initialize a creative project in SketchMonkey from a design brief and optional Brand DNA.",
+      "inputSchema": {
+        "type": "object",
+        "required": ["name", "brief"],
+        "properties": {
+          "name": { "type": "string", "description": "Project title." },
+          "brief": { "type": "string", "description": "The creative brief or hardware design description." },
+          "brandDna": {
+            "type": "object",
+            "description": "Optional Brand DNA rules (palette, tone, forbidden styles).",
+            "properties": {
+              "name": { "type": "string" },
+              "palette": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["hex", "name"],
+                  "properties": { "hex": { "type": "string" }, "name": { "type": "string" }, "role": { "type": "string" } }
+                }
+              },
+              "tone": { "type": "string" },
+              "forbiddenRules": { "type": "array", "items": { "type": "string" } }
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "annotations": { "readOnlyHint": false, "destructiveHint": false, "idempotentHint": false, "openWorldHint": false }
+    },
+    {
+      "name": "generate_directions",
+      "title": "Generate Five Art Directions",
+      "description": "Compile a brief into five distinct, expert-grade creative art directions (Ren, Maya, Zola, Kai, Nova) with palettes, typography, materials, and composition strategies.",
+      "inputSchema": {
+        "type": "object",
+        "required": ["brief"],
+        "properties": {
+          "brief": { "type": "string", "description": "The creative or product brief to explore." },
+          "projectId": { "type": "string", "description": "Optional project ID to associate directions with." }
+        },
+        "additionalProperties": false
+      },
+      "annotations": { "readOnlyHint": true, "destructiveHint": false, "idempotentHint": true, "openWorldHint": false }
+    },
+    {
+      "name": "select_direction",
+      "title": "Select Art Direction System",
+      "description": "Commit one of the five creative directions (Ren, Maya, Zola, Kai, Nova) as the default design system for a project, overwriting any previously selected direction on that project.",
+      "inputSchema": {
+        "type": "object",
+        "required": ["projectId", "directionId"],
+        "properties": {
+          "projectId": { "type": "string", "description": "The project ID." },
+          "directionId": { "type": "string", "enum": ["ren", "maya", "zola", "kai", "nova"], "description": "The chosen art direction lens." }
+        },
+        "additionalProperties": false
+      },
+      "annotations": { "readOnlyHint": false, "destructiveHint": true, "idempotentHint": true, "openWorldHint": false }
+    },
+    {
+      "name": "create_campaign",
+      "title": "Create Multi-Artboard Campaign",
+      "description": "Generate a full multi-format campaign from a master brief and optional background render. Produces responsive artboards (Poster, Square, Story, Banner, CMF Sheet) with editable text layers.",
+      "inputSchema": {
+        "type": "object",
+        "required": ["projectId", "name", "brief"],
+        "properties": {
+          "projectId": { "type": "string", "description": "Project ID." },
+          "name": { "type": "string", "description": "Campaign name." },
+          "brief": { "type": "string", "description": "Campaign narrative or concept." },
+          "directionId": { "type": "string", "enum": ["ren", "maya", "zola", "kai", "nova"] },
+          "backgroundUrl": { "type": "string", "description": "Optional SketchMonkey CDN rendered image URL (/cdn/sketchmonkey/...) to use as master artwork." },
+          "formats": {
+            "type": "array",
+            "items": { "type": "string", "enum": ["poster_a4", "square_1x1", "story_9x16", "banner_16x9", "cmf_sheet"] },
+            "description": "Formats to generate: 'poster_a4', 'square_1x1', 'story_9x16', 'banner_16x9', 'cmf_sheet'."
+          }
+        },
+        "additionalProperties": false
+      },
+      "annotations": { "readOnlyHint": false, "destructiveHint": false, "idempotentHint": false, "openWorldHint": false }
+    },
+    {
+      "name": "inspect_artboard",
+      "title": "Inspect Artboard Scene Graph",
+      "description": "Retrieve the structured layers, typography, copy fields, and layout of an artboard.",
+      "inputSchema": {
+        "type": "object",
+        "required": ["artboardId"],
+        "properties": { "artboardId": { "type": "string", "description": "Artboard ID." } },
+        "additionalProperties": false
+      },
+      "annotations": { "readOnlyHint": true, "destructiveHint": false, "idempotentHint": true, "openWorldHint": false }
+    },
+    {
+      "name": "edit_artboard",
+      "title": "Surgical Edit Artboard",
+      "description": "Apply a scoped surgical edit (headline, subhead, body copy, font family, alignment, accent color) to an artboard without altering untouched artwork.",
+      "inputSchema": {
+        "type": "object",
+        "required": ["artboardId"],
+        "properties": {
+          "artboardId": { "type": "string", "description": "Artboard ID." },
+          "headline": { "type": "string" },
+          "subheadline": { "type": "string" },
+          "bodyText": { "type": "string" },
+          "tagline": { "type": "string" },
+          "fontFamily": { "type": "string", "enum": ["sans", "serif", "mono", "grotesk"] },
+          "textAlignment": { "type": "string", "enum": ["left", "center", "right"] },
+          "accentColor": { "type": "string" },
+          "backgroundUrl": { "type": "string" }
+        },
+        "additionalProperties": false
+      },
+      "annotations": { "readOnlyHint": false, "destructiveHint": true, "idempotentHint": false, "openWorldHint": false }
+    },
+    {
+      "name": "apply_brand_dna",
+      "title": "Apply and Validate Brand DNA",
+      "description": "Save Brand DNA rules (palette, fonts, tone, forbidden styles) for a project, overwriting any previous Brand DNA rules on that project, and validate copy/briefs against them.",
+      "inputSchema": {
+        "type": "object",
+        "required": ["projectId", "brandDna"],
+        "properties": {
+          "projectId": { "type": "string", "description": "Project ID." },
+          "brandDna": {
+            "type": "object",
+            "required": ["name"],
+            "properties": {
+              "name": { "type": "string" },
+              "palette": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["hex", "name"],
+                  "properties": { "hex": { "type": "string" }, "name": { "type": "string" }, "role": { "type": "string" } }
+                }
+              },
+              "tone": { "type": "string" },
+              "forbiddenRules": { "type": "array", "items": { "type": "string" } }
+            }
+          },
+          "validateContent": { "type": "string", "description": "Optional text to check for forbidden rule violations." }
+        },
+        "additionalProperties": false
+      },
+      "annotations": { "readOnlyHint": false, "destructiveHint": true, "idempotentHint": true, "openWorldHint": false }
+    },
+    {
+      "name": "generate_variants",
+      "title": "Generate Copy & Typography Variants",
+      "description": "Create controlled variations of headlines, copy, or typography styles for an artboard.",
+      "inputSchema": {
+        "type": "object",
+        "required": ["artboardId"],
+        "properties": {
+          "artboardId": { "type": "string" },
+          "variantType": { "type": "string", "enum": ["copy", "typography"], "default": "copy" },
+          "count": { "type": "integer", "minimum": 1, "maximum": 10, "default": 3 }
+        },
+        "additionalProperties": false
+      },
+      "annotations": { "readOnlyHint": true, "destructiveHint": false, "idempotentHint": true, "openWorldHint": false }
+    },
+    {
+      "name": "get_artboard_export_metadata",
+      "title": "Get Artboard Export Metadata",
+      "description": "Retrieve saved artboard dimensions, format identifiers, and available background image URLs. This tool returns artboard metadata only; it does not render or compose finished PNG or PDF files.",
+      "inputSchema": {
+        "type": "object",
+        "required": ["artboardIds"],
+        "properties": {
+          "artboardIds": { "type": "array", "minItems": 1, "maxItems": 20, "items": { "type": "string" }, "description": "IDs of saved artboards to retrieve export metadata for." }
+        },
+        "additionalProperties": false
+      },
+      "annotations": { "readOnlyHint": true, "destructiveHint": false, "idempotentHint": true, "openWorldHint": false }
+    },
+    {
+      "name": "get_job",
+      "title": "Get Job Status",
+      "description": "Poll the progress of an asynchronous render or export job.",
+      "inputSchema": {
+        "type": "object",
+        "required": ["jobId"],
+        "properties": { "jobId": { "type": "string", "description": "Job ID returned by render_concept or render_video." } },
+        "additionalProperties": false
+      },
+      "annotations": { "readOnlyHint": true, "destructiveHint": false, "idempotentHint": true, "openWorldHint": false }
+    },
+    {
+      "name": "render_concept",
+      "title": "Render Design Concept (Legacy)",
+      "description": "Initiate an industrial design, hardware, product, vehicle, or spatial concept render with SketchMonkey. Supports locking a non-human product/vehicle/space reference via subjectModelId or @handle. Returns a jobId to poll.",
+      "inputSchema": {
+        "type": "object",
+        "required": ["prompt"],
+        "properties": {
+          "prompt": { "type": "string" },
+          "preset": { "type": "string", "enum": ["maya", "ren", "zola", "kai", "nova"] },
+          "aspectRatio": { "type": "string", "enum": ["1:1", "16:9", "9:16", "4:3", "3:4", "3:2", "2:3"], "default": "1:1" },
+          "autoEnhance": { "type": "boolean", "default": true },
+          "subjectModelId": { "type": "string", "description": "Optional non-human design reference ID or @handle (e.g. 'valletta-gte', 'aether-pulse', 'chrono-monolith')." },
+          "subjectVariantId": { "type": "string", "description": "Optional variant/trim ID on the selected design reference." },
+          "visitorId": { "type": "string" }
+        },
+        "additionalProperties": false
+      },
+      "annotations": { "readOnlyHint": false, "destructiveHint": false, "idempotentHint": false, "openWorldHint": true }
+    },
+    {
+      "name": "list_subject_models",
+      "title": "List Saved Subject References",
+      "description": "List available non-human design references (products/objects, vehicles/cars, architectural spaces, and stylized non-human mascots) including starter references and saved account references with their @handles, design traits, and variants. Real-person human likenesses and sensitive personal data are excluded.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "projectId": { "type": "string", "description": "Optional project ID filter." },
+          "kind": { "type": "string", "enum": ["object", "car", "space", "character", "creature"], "description": "Optional non-human category filter." }
+        },
+        "additionalProperties": false
+      },
+      "annotations": { "readOnlyHint": true, "destructiveHint": false, "idempotentHint": true, "openWorldHint": false }
+    },
+    {
+      "name": "save_subject_model",
+      "title": "Save Subject Reference",
+      "description": "Create or update a saved subject reference with identity traits and motion notes for use in image and video prompts. This saves reference data; it does not train an AI model or guarantee visual consistency. Only non-human design categories ('object', 'car', 'space', 'character', 'creature') are supported; never submit real-person facial/voice data or sensitive personal information.",
+      "inputSchema": {
+        "type": "object",
+        "required": ["name", "kind", "identityLock"],
+        "properties": {
+          "id": { "type": "string", "description": "Optional reference ID when updating an existing custom reference." },
+          "projectId": { "type": "string", "description": "Optional project ID to bind this reference to." },
+          "name": { "type": "string", "description": "Product, vehicle, or space display name (e.g. 'Valletta GT-E', 'Chrono-01', 'Aether Pulse')." },
+          "handle": { "type": "string", "description": "Optional @handle slug (e.g. 'valletta-gte')." },
+          "kind": { "type": "string", "enum": ["object", "car", "space", "character", "creature"], "description": "Non-human design reference category." },
+          "tagline": { "type": "string", "description": "Short product or brand positioning tagline." },
+          "identityLock": { "type": "string", "description": "Authoritative product/vehicle/spatial design specification (structural geometry, materials, finish, silhouette, lighting; never real-person facial/biometric data)." },
+          "immutableTraits": { "type": "array", "items": { "type": "string" }, "description": "Specific product or material design traits to preserve across prompts." },
+          "voiceAndMotion": { "type": "string", "description": "Camera motion, turntable pacing, or mechanical articulation notes for video generation." },
+          "heroImageUrl": { "type": "string", "description": "Optional owned SketchMonkey CDN reference image URL (/cdn/sketchmonkey/...)." }
+        },
+        "additionalProperties": false
+      },
+      "annotations": { "readOnlyHint": false, "destructiveHint": true, "idempotentHint": false, "openWorldHint": false }
+    },
+    {
+      "name": "render_video",
+      "title": "Render Video Turnaround with Camera Controls",
+      "description": "Generate an industrial design video turnaround or product clip with fine-grained cinematic camera controls (360° Orbit, Cinematic Push-In, Heroic Pull-Out, Lateral Pan, Vertical Tilt, Crane Arc, Locked Tripod, Drone Spiral), camera angles (Eye Level, Low Hero, High Studio, Top-Down, Isometric, Macro), pacing, and lens framing. Supports text-to-video or animating an existing concept render into a 3D turnaround.",
+      "inputSchema": {
+        "type": "object",
+        "required": ["prompt"],
+        "properties": {
+          "prompt": { "type": "string", "description": "Detailed description of the product, object, or scene to animate." },
+          "cameraMotion": { "type": "string", "enum": ["orbit_360", "push_in", "pull_out", "pan_horizontal", "tilt_vertical", "crane_arc", "static_tripod", "drone_spiral"], "default": "orbit_360" },
+          "cameraAngle": { "type": "string", "enum": ["eye_level", "low_angle", "high_angle", "top_down", "isometric", "macro_detail"], "default": "eye_level" },
+          "cameraPacing": { "type": "string", "enum": ["smooth_cinematic", "studio_precision", "dramatic_reveal"], "default": "smooth_cinematic" },
+          "lensFraming": { "type": "string", "enum": ["tight_hero", "wide_context", "macro_focus"], "default": "tight_hero" },
+          "cameraPreset": { "type": "string", "enum": ["industrial_turntable", "hero_reveal", "cmf_macro", "cad_isometric", "lateral_profile", "locked_studio"] },
+          "aspectRatio": { "type": "string", "enum": ["16:9", "9:16", "1:1"], "default": "16:9" },
+          "durationSeconds": { "type": "integer", "enum": [4, 6, 8], "default": 4 },
+          "referenceImageUrl": { "type": "string", "description": "Optional SketchMonkey CDN URL (/cdn/sketchmonkey/...) of an existing concept render to turnaround." },
+          "subjectModelId": { "type": "string", "description": "Optional non-human design reference ID or @handle to lock product/vehicle/space traits in video." },
+          "subjectVariantId": { "type": "string", "description": "Optional variant/trim ID for the selected design reference." },
+          "visitorId": { "type": "string", "description": "Optional visitor session identifier." }
+        },
+        "additionalProperties": false
+      },
+      "annotations": { "readOnlyHint": false, "destructiveHint": false, "idempotentHint": false, "openWorldHint": true }
+    },
+    {
+      "name": "get_camera_presets",
+      "title": "Get Video Camera Controls & Presets",
+      "description": "List all available cinematic camera motions, angles, pacing dynamics, and lens framing options with prompt directives and curated presets for video turnarounds.",
+      "inputSchema": { "type": "object", "properties": {}, "additionalProperties": false },
+      "annotations": { "readOnlyHint": true, "destructiveHint": false, "idempotentHint": true, "openWorldHint": false }
+    },
+    {
+      "name": "get_render_status",
+      "title": "Get Render Job Status (Legacy Alias)",
+      "description": "Retrieve the current status of an image or video render job by jobId. Returns progress and, when complete, available output URLs; returns an error when the job is unavailable. This is a compatibility alias for get_job.",
+      "inputSchema": {
+        "type": "object",
+        "required": ["jobId"],
+        "properties": { "jobId": { "type": "string" } },
+        "additionalProperties": false
+      },
+      "annotations": { "readOnlyHint": true, "destructiveHint": false, "idempotentHint": true, "openWorldHint": false }
+    },
+    {
+      "name": "enhance_prompt",
+      "title": "Enhance Design Prompt with CMF",
+      "description": "Enrich an informal product description with Color, Material, Finish (CMF) taxonomy, authentic parting lines, and lighting.",
+      "inputSchema": {
+        "type": "object",
+        "required": ["prompt"],
+        "properties": {
+          "prompt": { "type": "string" },
+          "preset": { "type": "string", "enum": ["maya", "ren", "zola", "kai", "nova"] }
+        },
+        "additionalProperties": false
+      },
+      "annotations": { "readOnlyHint": true, "destructiveHint": false, "idempotentHint": true, "openWorldHint": false }
+    },
+    {
+      "name": "get_account_status",
+      "title": "Get Account Status & Quota",
+      "description": "Check authentication status, current user identity, active subscription tier (Free, Chimp, Gorilla, Silverback), and remaining daily generation quota for image and video.",
+      "inputSchema": { "type": "object", "properties": {}, "additionalProperties": false },
+      "annotations": { "readOnlyHint": true, "destructiveHint": false, "idempotentHint": true, "openWorldHint": false }
+    }
+  ]
+}
