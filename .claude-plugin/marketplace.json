@@ -11,7 +11,7 @@
       "name": "sketchmonkey",
       "source": "./",
       "description": "SketchMonkey Design Studio: product shots, design directions, CMF boards, launch campaigns and 360° videos, rendered through your SketchMonkey account.",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "author": {
         "name": "Neural Deep Network Ltd"
       },

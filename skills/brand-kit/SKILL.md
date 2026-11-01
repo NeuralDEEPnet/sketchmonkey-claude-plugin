@@ -23,7 +23,7 @@ If they have guidelines or a website, ask them to paste the key parts.
 
 1. Use the `projectId` from earlier, or call `create_project` with a short `name` and `brief`.
 2. Call `apply_brand_dna` with the `projectId` and `brandDna`: `name`, `palette` (a list of `hex`, `name` and `role`), `tone` and `forbiddenRules`. This replaces any brand rules already saved on that project, so confirm before overwriting existing rules.
-3. To check some text at the same time, include it as `validateContent`. Report the result exactly: which rules it broke, or that it passed.
+3. To check some text at the same time, include it as `validateContent`. SketchMonkey's check only recognises a few built-in rule types (gradients, drop shadows, neon or glow, serif type, clutter or busy layouts) and misses anything else, such as a banned word. So report its result, then check the text yourself against every rule, and name any rule the text breaks that the tool didn't flag. Never say text is on-brand because the tool alone passed it.
 
 From then on, `generate_directions` with this `projectId` takes the saved brand into account.
 
@@ -31,7 +31,7 @@ From then on, `generate_directions` with this `projectId` takes the saved brand 
 
 Write three alternatives yourself in the brand's tone, each a different angle (benefit, emotion, curiosity), and check each against the rules to avoid before showing them. `generate_variants` with `variantType: "copy"` also returns quick mechanical variations of the current headline; use them only as raw material.
 
-To check new copy against the saved rules with the tool, call `apply_brand_dna` again with exactly the same saved rules plus `validateContent`. That re-saves identical rules, so nothing changes. Otherwise check the copy yourself and say that you did.
+Always check copy against the rules yourself; the tool's check is limited (see Step 2). To run the tool's check as well, call `apply_brand_dna` again with exactly the same saved rules plus `validateContent`. That re-saves identical rules, so nothing changes.
 
 ## Step 4: Typography options
 

@@ -49,6 +49,8 @@ Prompt: the product fingerprint, the setting and the lighting, then: "single con
 
 Call `get_account_status` first if you haven't this conversation and check `videoQuota.effectiveRemaining`. Then call `render_video` with `prompt`, the camera recipe or controls, `aspectRatio`, `durationSeconds`, and `referenceImageUrl` or `subjectModelId` if you have one.
 
+If `render_video` refuses the request, quote its reason in plain words, don't retry more than once, and suggest making the video on [sketchmonkey.design](https://www.sketchmonkey.design) or trying again later. Never describe a refused video as started.
+
 ## Step 5: Deliver
 
 Poll `get_job` with the exact `jobId` about every 20 seconds; clips usually take 30 to 90 seconds. Then present:

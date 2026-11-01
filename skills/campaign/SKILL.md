@@ -48,12 +48,13 @@ Call `create_campaign` with:
 
 ## Step 5: Write the copy, then apply it
 
-The layouts start with automatic text that often just repeats the brief in capitals. Write proper copy yourself (guidance in `${CLAUDE_SKILL_DIR}/references/copy-and-formats.md`, the `references` folder next to this file):
+Every new layout starts with automatic placeholder text that must not reach a customer: the headline repeats the brief in capitals, the body text is a truncated design rationale ("Grounds … in Dieter Rams / Braun functionalism…"), and the tagline reads "NEURAL DEEP · REN SERIES", SketchMonkey's own studio name. Write proper copy for all four text fields (guidance in `${CLAUDE_SKILL_DIR}/references/copy-and-formats.md`, the `references` folder next to this file):
 - **Headline:** seven words or fewer, one idea.
 - **Subheadline:** one line with the key benefit or detail.
-- **Tagline:** a short sign-off or the call to action.
+- **Body text:** one or two plain sentences about the product, or the person's own details such as price or availability if they gave them.
+- **Tagline:** the brand or product name, or the call to action. Never leave the "NEURAL DEEP" placeholder.
 
-Show the copy, then for each artboard: `inspect_artboard`, `edit_artboard` with only `headline`, `subheadline` and `tagline`, then `inspect_artboard` again to confirm nothing else changed. Shorten the headline for the story format if needed.
+Show the copy, then for each artboard: `inspect_artboard`, `edit_artboard` with `headline`, `subheadline`, `bodyText` and `tagline`, then `inspect_artboard` again to confirm the four fields changed and the artwork, font and colours didn't. Shorten the headline for the story format if needed.
 
 ## Step 6: Present
 
