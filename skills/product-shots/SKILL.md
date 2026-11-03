@@ -11,7 +11,7 @@ Turn a product, described or photographed, into a small set of beautiful, consis
 
 ## How it works (tell people when it matters)
 
-SketchMonkey renders brand-new images from a precise description of the product. It does not edit the pixels of an uploaded photo, so the better the description, the closer the match. When someone shares a photo, say this in one friendly line and explain that you'll describe their product to the studio in detail.
+This skill renders brand-new images from a precise description of the product, so the better the description, the closer the match. When someone shares a photo and wants **that photo** changed (a new background, a bigger part, a new colour), use the `photo-edit` skill instead: it edits the real photo and keeps the product unchanged. When they want a fresh set of shots, or the photo is too poor to keep, stay here and describe their product to the studio in detail.
 
 ## Step 1: Write the product fingerprint
 
@@ -99,7 +99,7 @@ For a product the person will shoot again, offer to save it as a reusable refere
 - `kind: "object"`, a `name` and an optional short `handle`.
 - `identityLock`: the fingerprint.
 - `immutableTraits`: the must-not-change list.
-- `heroImageUrl`: their best SketchMonkey render of it (an image they uploaded elsewhere can't be used).
+- `heroImageUrl`: their best SketchMonkey image of it: a render, an edited photo, or a real photo uploaded with `upload_reference_image` (see `photo-edit` Step 1). An image hosted elsewhere must be uploaded first. A saved reference with an image is used as a visual reference in later renders, not only as text.
 
 Afterwards pass the returned ID or handle as `subjectModelId` on later `render_concept` and `render_video` calls. Say plainly that a saved reference improves consistency but doesn't guarantee identical results. `list_subject_models` shows their saved references and a few built-in samples.
 

@@ -10,6 +10,7 @@ SketchMonkey Design Studio brings a product design studio into Claude. Describe 
 |---|---|---|
 | "What can SketchMonkey do for my product?" | `/sketchmonkey:studio` | A friendly start that points you to the right workflow |
 | "Make my product photos look professional" | `/sketchmonkey:product-shots` | Hero, white-background listing, lifestyle, detail and social shots that stay true to your product |
+| "Put my bottle on a marble counter, keep the bottle exactly" | `/sketchmonkey:photo-edit` | One precise change to your real photo, with the product kept unchanged and a match score to prove it |
 | "Show me five directions for a desk lamp" | `/sketchmonkey:explore-concepts` | Five design directions side by side, then concept renders of your favourites |
 | "Give me three colourways for my headphones" | `/sketchmonkey:cmf-board` | Part-by-part colour, material and finish options, saved as an editable CMF sheet |
 | "Make a launch campaign for my product" | `/sketchmonkey:campaign` | Poster, square, story and banner layouts with real copy, editable afterwards |
@@ -35,7 +36,7 @@ You need a SketchMonkey account; sign up at [sketchmonkey.design](https://www.sk
 
 ## Good to know
 
-- **Images are created, not retouched.** SketchMonkey renders new images from a detailed description of your product. When you share a photo, Claude describes your product to the studio in detail; it doesn't edit the photo's pixels.
+- **New shots or real edits.** For new shots, SketchMonkey renders fresh images from a detailed description of your product. To change a photo you already have, Claude uploads it to your SketchMonkey account and edits it in place, keeping the product's shape, colours and angle; each edit reports how closely the rest of the photo was kept.
 - **Allowance.** Exploring directions, polishing prompts, CMF tables, layouts and text edits are free. Each image render and each video render counts toward your SketchMonkey plan's limits, and Claude checks before large batches. Plans and billing are managed only on the SketchMonkey website; this plugin never asks for payment details.
 - **Exports.** Campaign and CMF layouts are saved in your SketchMonkey project. Asking for export details returns sizes and image links; the plugin doesn't produce finished PNG or PDF files.
 - **Concepts, not engineering.** Concept renders and material suggestions are design proposals, not certified CAD, engineering analysis or manufacturing approval.
@@ -47,7 +48,7 @@ This plugin contains no executable code. It has two parts:
 - **Skills:** written instructions that guide Claude through each workflow.
 - **One remote connector:** the SketchMonkey MCP server at `https://sketchmonkey-neuraldeepnet.on.adaptive.ai/api/mcp`, operated by Neural Deep Network Ltd. Claude connects to it only after you sign in with OAuth 2.1 (PKCE), granting the scopes `account:read`, `creative:read`, `creative:write` and `renders:run`.
 
-When you use the plugin, Claude sends SketchMonkey the design briefs, render prompts, project names, brand rules and layout edits needed for your request. SketchMonkey stores your projects, brand rules, saved product references and renders in your account and serves finished images and videos from its own content delivery network. Product photos you share with Claude are not uploaded to SketchMonkey; Claude only sends its written description. SketchMonkey rejects sensitive personal data such as identity documents, health records, payment card numbers, credentials and real-person biometric data. Operational connector logs keep only the tool name, status, duration, an error code and a pseudonymous network hash, and are deleted after 24 hours.
+When you use the plugin, Claude sends SketchMonkey the design briefs, render prompts, project names, brand rules and layout edits needed for your request. SketchMonkey stores your projects, brand rules, saved product references and renders in your account and serves finished images and videos from its own content delivery network. A product photo is uploaded to your SketchMonkey account only when you ask to edit it: from a link you give, or from a file Claude can read. It is stored in your account like your renders. Otherwise Claude sends only its written description of your product. SketchMonkey rejects sensitive personal data such as identity documents, health records, payment card numbers, credentials and real-person biometric data. Operational connector logs keep only the tool name, status, duration, an error code and a pseudonymous network hash, and are deleted after 24 hours.
 
 ## Tools
 
@@ -70,6 +71,8 @@ When you use the plugin, Claude sends SketchMonkey the design briefs, render pro
 | `apply_brand_dna` | Saves brand rules to a project and checks copy | Overwrites |
 | `edit_artboard` | Edits a layout's text, font, alignment, accent or background | Overwrites |
 | `save_subject_model` | Saves a reusable product reference | Creates or overwrites |
+| `upload_reference_image` | Stores a product photo in your account, from a link or file you provide | Creates |
+| `edit_product_photo` | Edits a stored photo, keeping the product unchanged (uses image allowance) | Creates a render |
 
 ## Privacy policy
 

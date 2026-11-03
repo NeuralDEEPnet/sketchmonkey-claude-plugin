@@ -251,6 +251,41 @@
       "annotations": { "readOnlyHint": false, "destructiveHint": true, "idempotentHint": false, "openWorldHint": false }
     },
     {
+      "name": "upload_reference_image",
+      "title": "Upload Product Reference Image",
+      "description": "Upload a real product photo via public HTTPS URL or base64 image bytes (PNG, JPEG, or WebP up to 10 MB), validate its format and dimensions, store it on the SketchMonkey CDN scoped to the authenticated owner, and return the owned CDN URL for use in edit_product_photo, save_subject_model, or render_concept.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "imageUrl": { "type": "string", "description": "Public HTTPS image URL to fetch and store on your SketchMonkey CDN account." },
+          "imageBase64": { "type": "string", "maxLength": 15000000, "description": "Base64-encoded PNG, JPEG, or WebP bytes (or data:image/...;base64,... URI) up to 10 MB." },
+          "label": { "type": "string", "description": "Optional human-readable label for the uploaded product photo." }
+        },
+        "additionalProperties": false
+      },
+      "annotations": { "readOnlyHint": false, "destructiveHint": false, "idempotentHint": false, "openWorldHint": true }
+    },
+    {
+      "name": "edit_product_photo",
+      "title": "Product-Faithful Photo Edit",
+      "description": "Perform an instruction-based image edit on an existing real product photo (e.g., attaching an accessory, adding a drip tray, or changing the scene) while keeping the original product's shape, proportions, colours, buttons, materials, and camera angle unchanged. Runs in image-conditioned edit/inpaint mode with autoEnhance, CMF injection, and lens style suffixes strictly OFF, and computes a fidelity similarity score outside the edited region. Returns a jobId that get_job can poll.",
+      "inputSchema": {
+        "type": "object",
+        "required": ["sourceImageUrl", "instruction"],
+        "properties": {
+          "sourceImageUrl": { "type": "string", "description": "Owned or approved SketchMonkey CDN URL (/cdn/sketchmonkey/...) of the source product photo." },
+          "instruction": { "type": "string", "description": "The requested change to apply (e.g. 'add a wider white drip tray under the base')." },
+          "maskImageUrl": { "type": "string", "description": "Optional owned SketchMonkey CDN mask image URL (/cdn/sketchmonkey/...) where white marks the region to edit and black marks the region to preserve." },
+          "regionHint": { "type": "string", "description": "Optional region hint describing where the edit applies (e.g. 'under the base', 'bottom', 'top', or normalized 'x,y,w,h' coordinates)." },
+          "preserveStrength": { "type": "number", "minimum": 0, "maximum": 1, "default": 0.88, "description": "Product preservation strength from 0 to 1 (default 0.88 high)." },
+          "aspectRatio": { "type": "string", "enum": ["match_source", "match source", "1:1", "16:9", "9:16", "4:3", "3:4", "3:2", "2:3"], "default": "match_source", "description": "Output aspect ratio ('match_source' by default)." },
+          "visitorId": { "type": "string", "description": "Optional visitor session identifier." }
+        },
+        "additionalProperties": false
+      },
+      "annotations": { "readOnlyHint": false, "destructiveHint": false, "idempotentHint": false, "openWorldHint": true }
+    },
+    {
       "name": "render_video",
       "title": "Render Video Turnaround with Camera Controls",
       "description": "Generate an industrial design video turnaround or product clip with fine-grained cinematic camera controls (360° Orbit, Cinematic Push-In, Heroic Pull-Out, Lateral Pan, Vertical Tilt, Crane Arc, Locked Tripod, Drone Spiral), camera angles (Eye Level, Low Hero, High Studio, Top-Down, Isometric, Macro), pacing, and lens framing. Supports text-to-video or animating an existing concept render into a 3D turnaround.",
