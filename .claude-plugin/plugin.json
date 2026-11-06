@@ -1,8 +1,8 @@
 {
   "name": "sketchmonkey",
   "displayName": "SketchMonkey Design Studio",
-  "version": "1.0.3",
-  "description": "Your product design studio inside Claude. Turn a product, photo or idea into studio-quality product shots, product-faithful photo edits, five design directions, colour-material-finish boards, launch campaigns and 360° videos, rendered through your SketchMonkey account.",
+  "version": "1.1.0",
+  "description": "Your industrial, transport and product design studio inside Claude. Take a product, vehicle, photo or idea from brief to launch: design directions, concept renders and vehicle view sets, studio design reviews, colour-material-finish boards, engineering handoff packages, studio-quality product shots, product-faithful photo edits, launch campaigns and 360° videos, rendered through your SketchMonkey account.",
   "author": {
     "name": "Neural Deep Network Ltd",
     "email": "3d@neuraldeep.net",
@@ -19,7 +19,11 @@
     "concept-art",
     "marketing-campaign",
     "product-video",
-    "ecommerce"
+    "ecommerce",
+    "transport-design",
+    "automotive-design",
+    "design-review",
+    "design-handoff"
   ],
   "icon": "./assets/icon.png",
   "documentationUrl": "https://www.sketchmonkey.design/mcp-server",
