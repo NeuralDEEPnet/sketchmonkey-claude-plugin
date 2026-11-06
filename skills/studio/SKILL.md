@@ -22,6 +22,10 @@ When someone asks what SketchMonkey can do, keep the answer to about one phone s
 | Make a launch campaign (poster, social post, story, banner) | `campaign` |
 | Make a 360° spin or short product video | `turnaround-video` |
 | Save my brand colours, voice and rules | `brand-kit` |
+| Design a vehicle (car, bike, scooter, train, aircraft, boat) | `transport-design` |
+| Take my product all the way from idea to launch | `design-program` |
+| Get honest feedback on a design | `design-review` |
+| Prepare a design for engineering, CAD or a factory | `engineering-handoff` |
 
 Shortcuts:
 - A product photo with little or no text means "make my product photos look amazing".
@@ -29,6 +33,10 @@ Shortcuts:
 - "Design a ..." or "what could a ... look like" means `explore-concepts`.
 - "Poster", "ad", "Instagram post" or "launch" means `campaign`.
 - "Video", "360", "spin", "animate" or "reel" means `turnaround-video`.
+- Any vehicle (car, motorcycle, e-bike, scooter, truck, bus, train, tram, aircraft, eVTOL, boat, mobility pod) means `transport-design`.
+- "From idea to launch", "end to end", "the whole process" or "be our design studio" means `design-program`.
+- "Critique", "review", "feedback" or "what would you change" about a design means `design-review`.
+- "Manufacturer", "factory", "engineering", "CAD", "spec" or "how would this be made" means `engineering-handoff`.
 
 ## 2. House rules (apply in every SketchMonkey skill)
 
@@ -55,9 +63,9 @@ Every render can be styled through one of five lenses. Introduce them by look, w
 
 | Lens | In plain words | Great for |
 |---|---|---|
-| Ren | Precise, engineered and calm, in the spirit of classic functional modernism | Tech, tools, audio, appliances |
+| Ren | Precise, engineered and calm, in the spirit of classic functional modernism | Tech, tools, audio, appliances, vehicles |
 | Maya | Friendly, soft and ergonomic, made for hands and homes | Handhelds, wearables, home and wellness products |
-| Kai | Polished, premium and retail-ready | Beauty, watches, packaging, flagship launches |
+| Kai | Polished, premium and retail-ready | Beauty, watches, packaging, flagship launches, premium vehicles |
 | Zola | Dramatic, sculptural and editorial | Luxury goods, statement furniture, fashion accessories |
 | Nova | Futuristic, organic and experimental; its renders deliberately add surreal, glitch-art effects | Concept gear, footwear, experimental art |
 
