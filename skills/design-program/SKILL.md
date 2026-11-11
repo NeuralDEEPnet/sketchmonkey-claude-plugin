@@ -11,21 +11,21 @@ Act as the studio's design lead. Plan the whole journey, keep one project, and m
 
 ## Step 1: Frame the brief (free)
 
-From what the person has said, write a one-screen brief with these headings. Fill what you can, mark the rest "to confirm", and ask one question about the gap that matters most.
+From what the person has said, write a short brief with these headings: one line each, about 80 words in all. Fill what you can, mark the rest "to confirm" in a word or two, and keep your one question for the end of the reply. The brief and the plan in Step 2 together must fit on one phone screen, so don't add lists of assumptions, feature ideas or caveats here; they belong in later phases.
 
 - **Product or vehicle:** what it is and what it must do.
 - **People and context:** who uses it, where, how often, and what bothers them today.
 - **Must-haves and constraints:** size, materials, price band, sustainability, regulations to respect, fixed parts.
-- **Position:** two or three existing kinds of product it competes with and how this one should feel different. Use general knowledge only, and say it is a starting point, not market research.
+- **Position:** in one sentence, how it should feel different from the usual kinds of product in its category. This is a starting point from general knowledge, not market research; never state market facts, shares or prices.
 - **Success:** what would make the person say "that's it".
 
 ## Step 2: Plan the program and the allowance
 
-Show the plan as a short table and ask for a go-ahead before spending any renders.
+Show the plan as a short table, give the total as one line ("about 10 to 16 images and one video"), and end with either a go-ahead request or the one question that matters most, never both and never more than one question.
 
 | Phase | Skill | Renders (estimate) |
 |---|---|---|
-| 1. Directions | `explore-concepts`, or `transport-design` for vehicles | 0 |
+| 1. Directions | `explore-concepts`, or `transport-design` for vehicles, `spatial-design` for stands, shops and rooms | 0 |
 | 2. Concepts | same skill | 2 to 5 images |
 | 3. Review and refine | `design-review` | 0 to 2 images |
 | 4. Colour, material and finish | `cmf-board` | 0 to 3 images |
@@ -34,7 +34,7 @@ Show the plan as a short table and ask for a go-ahead before spending any render
 | 7. Video | `turnaround-video` | 1 video |
 | 8. Launch | `campaign`, `brand-kit` | 0 |
 
-Before the first render, call `get_account_status` once and compare the estimate with `imageQuota.effectiveRemaining` and `videoQuota.effectiveRemaining`. If the whole plan doesn't fit, propose a lean version (for example two concepts and one video) or spreading phases over days. Let the person skip or reorder phases.
+Before the first render, call `get_account_status` once and compare the estimate with `imageQuota.effectiveRemaining` and `videoQuota.effectiveRemaining`. If the whole plan doesn't fit, propose a lean version (for example two concepts and one video) or spreading phases over days. Let the person skip or reorder phases. Offer `packaging-design` (2 to 4 images) as an extra phase after product visuals when the product ships in a pack, and a stand or shop in `spatial-design` (2 to 4 images) when the launch needs one; leave them out of the first plan unless the person mentioned them.
 
 ## Step 3: Open one project
 
