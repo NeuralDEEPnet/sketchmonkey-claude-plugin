@@ -11,7 +11,7 @@
       "name": "sketchmonkey",
       "source": "./",
       "description": "SketchMonkey Design Studio: industrial, transport, packaging and spatial design from brief to launch, with design directions, vehicle view sets, packaging, retail stands, design reviews, CMF boards, engineering handoffs, product shots, launch campaigns and 360° videos, rendered through your SketchMonkey account.",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "author": {
         "name": "Neural Deep Network Ltd"
       },

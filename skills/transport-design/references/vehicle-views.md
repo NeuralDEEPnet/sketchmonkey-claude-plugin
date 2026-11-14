@@ -23,7 +23,7 @@ Each recipe gives the camera, setting and lighting part of the prompt. Put the f
 
 ## Motorcycles, scooters and bicycles
 
-- Side profile is the hero; use "pure side view, camera at hub height, long lens".
+- Side profile is the hero; use "pure side view, camera at wheel-centre height, long lens".
 - Front three-quarter from slightly low ("camera at knee height") to give presence.
 - Detail: tank and seat junction, headlamp, drivetrain or battery integration.
 - Ratios: `16:9` or `3:2` for side views, `4:3` for three-quarters, `3:4` for social.
@@ -47,7 +47,7 @@ Each recipe gives the camera, setting and lighting part of the prompt. Put the f
 - Three-quarter running shot: "front three-quarter from slightly above, light wake, bright sea light."
 - Deck plan: "overhead view of the deck layout, orthographic feel."
 
-## Mobility pods and people movers
+## Shuttles and people movers
 
 - Treat them like small buses: side profile, front three-quarter in a pedestrian street, interior seating overview.
 - Show a doorway at human height to make scale clear without adding people.

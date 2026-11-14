@@ -37,7 +37,7 @@ Typical starting values for design-intent packages. They are rules of thumb to s
 
 ## Vehicles and large products
 
-- **Body panels:** stamped steel or aluminium at volume; composites (SMC, carbon fibre) for low volume or complex shapes; thermoformed plastics for pods and low-speed vehicles.
+- **Body panels:** stamped steel or aluminium at volume; composites (SMC, carbon fibre) for low volume or complex shapes; thermoformed plastics for shuttles and low-speed vehicles.
 - **Panel gaps:** typical car shut lines are about 3 to 5 mm; flush glazing and tight gaps add cost.
 - **Lighting:** lamp graphics are set by optics and regulations (position, height, colour); check early.
 - **Two-wheelers:** hydroformed or welded aluminium or steel frames; battery packs need ventilation, protection and service access.
