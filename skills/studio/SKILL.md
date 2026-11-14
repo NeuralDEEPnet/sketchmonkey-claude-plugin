@@ -35,7 +35,7 @@ Shortcuts:
 - "Design a ..." or "what could a ... look like" means `explore-concepts`.
 - "Poster", "ad", "Instagram post" or "launch" means `campaign`.
 - "Video", "360", "spin", "animate" or "reel" means `turnaround-video`.
-- Any vehicle (car, motorcycle, e-bike, scooter, truck, bus, train, tram, aircraft, eVTOL, boat, mobility pod) means `transport-design`.
+- Any vehicle (car, motorcycle, e-bike, scooter, truck, bus, train, tram, aircraft, eVTOL, boat, autonomous shuttle) means `transport-design`.
 - "Box", "packaging", "label", "gift set", "unboxing" or "on the shelf" means `packaging-design`.
 - "Stand", "booth", "pop-up", "shop", "showroom", "display wall" or designing a room means `spatial-design`. A product photographed in a room is still `product-shots`.
 - "From idea to launch", "end to end", "the whole process" or "be our design studio" means `design-program`.

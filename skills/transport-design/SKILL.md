@@ -1,6 +1,6 @@
 ---
 name: transport-design
-description: Transport and vehicle design with SketchMonkey, for cars, motorcycles, e-bikes, scooters, trucks, buses, trains, aircraft cabins, eVTOLs, boats and mobility pods. Takes a vehicle from package and proportions to a consistent set of side, front three-quarter, rear three-quarter, interior and detail renders, and on to turntable videos. Use for requests like 'design an electric city car', 'sketch a cafe-racer motorcycle', 'show me a tram for our city', 'interior for a sleeper train', 'concept for a two-seat eVTOL' or 'what could our e-bike look like'.
+description: Transport and vehicle design with SketchMonkey, for cars, motorcycles, e-bikes, scooters, trucks, buses, trains, aircraft cabins, eVTOLs, boats and small autonomous shuttles. Takes a vehicle from package and proportions to a consistent set of side, front three-quarter, rear three-quarter, interior and detail renders, and on to turntable videos. Use for requests like 'design an electric city car', 'sketch a cafe-racer motorcycle', 'show me a tram for our city', 'interior for a sleeper train', 'concept for a two-seat eVTOL' or 'what could our e-bike look like'.
 ---
 
 # Transport design
@@ -14,7 +14,7 @@ Help people design vehicles the way a transport design studio does: proportions 
 Before any render, write a package of 80 to 140 words. It plays the role the product fingerprint plays in `product-shots`, and it goes into every prompt so every view shows the same vehicle.
 
 - **Type and mission:** what it is, who rides in it, where and how far ("two-seat urban electric city car for 30 km daily commutes and tight parking").
-- **Layout and drivetrain:** seats and layout (1+1, 2+2, 3 rows, cab-forward), drive (electric skateboard, mid-engine, hub motors, pantograph, sail), wheels or hull or rotors.
+- **Layout and drivetrain:** seats and layout (1+1, 2+2, 3 rows, cab-forward), drive (electric skateboard, mid-engine, in-wheel motors, pantograph, sail), wheels or hull or rotors.
 - **Proportions, as ratios:** length to height, wheelbase to overall length, front and rear overhangs, wheel diameter against body height, greenhouse (the glass area) against body side. "Wheelbase about 70% of length, very short overhangs, wheels about half the body-side height."
 - **Stance:** wheels pushed to the corners, track width, ride height, rake.
 - **Signature elements:** lamp graphic, shoulder line, beltline kick, roof shape, nose shape, wheel design.
@@ -49,7 +49,7 @@ The standard set, in this order:
 4. **Interior**, `16:9`: the driver's or passenger's view, or a cabin overview.
 5. **Detail**, `4:3`: lamp signature, wheel, door handle or seat.
 
-Start with the side profile alone when proportions are still open, review it with the person, then render the rest. View recipes for cars, two-wheelers, rail, aircraft, boats and pods are in `${CLAUDE_SKILL_DIR}/references/vehicle-views.md`.
+Start with the side profile alone when proportions are still open, review it with the person, then render the rest. View recipes for cars, two-wheelers, rail, aircraft, boats and shuttles are in `${CLAUDE_SKILL_DIR}/references/vehicle-views.md`.
 
 Write each prompt yourself:
 
