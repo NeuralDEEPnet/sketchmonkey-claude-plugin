@@ -53,9 +53,9 @@ Start with the side profile alone when proportions are still open, review it wit
 
 Write each prompt yourself:
 
-> **[view]** of **[full vehicle package]**. **[direction's design language]**. **[setting]**. **[lighting]**. **[camera and lens]**. Photorealistic transport design render, no text, no badges, no logos, no licence plate characters.
+> **[view]** of **[full vehicle package]**. **[direction's design language]**. **[setting and ground]**. **[lighting]**. **[camera and lens]**. Photorealistic transport design render, no text, no badges, no logos, no licence plate characters.
 
-Keep the closing words "transport design render" in every prompt. SketchMonkey reads them to switch from product and room wording to transport wording, which is what keeps a car body from being described like a gadget or a cabin like a room.
+Keep the closing words "transport design render" in every prompt. SketchMonkey reads them to describe the image as a vehicle, with transport design terms for the body, glass and cabin; without them a car body can be described like a gadget, or a cabin like a room.
 
 Call `render_concept` with:
 - `prompt`: the prompt above.
@@ -67,7 +67,7 @@ Start all renders in the set, then poll each `jobId` with `get_job` about every 
 
 ## Step 4: Keep it the same vehicle
 
-Once the person likes a front three-quarter render, offer to save the vehicle with `save_subject_model`: `kind: "car"` (use it for any vehicle), a short `name`, the package as `identityLock`, the must-not-change traits as `immutableTraits`, and the render's `imageUrl` as `heroImageUrl`. Pass the returned ID as `subjectModelId` in later renders and videos so the studio conditions on that image. Say plainly that this improves consistency but doesn't guarantee identical results.
+Once the person likes a front three-quarter render, offer to save the vehicle with `save_subject_model`: `kind: "car"` (the kind SketchMonkey uses for every vehicle type), a short `name`, the package as `identityLock`, the must-not-change traits as `immutableTraits`, and the render's `imageUrl` as `heroImageUrl`. Pass the returned ID as `subjectModelId` in later renders and videos so the studio conditions on that image. Say plainly that this improves consistency but doesn't guarantee identical results.
 
 ## Step 5: Review like a studio
 
