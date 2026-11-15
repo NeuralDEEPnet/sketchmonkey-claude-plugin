@@ -1,5 +1,5 @@
 ---
-description: A stand brief gets a space package reused in every prompt, the spatial closing phrase, widescreen overview and eye-level renders, no lettering requested, polling and exact links.
+description: A stand brief gets a space specification reused in every prompt, the spatial closing phrase, widescreen overview and eye-level renders, no lettering requested, polling and exact links.
 tags: [spatial-design]
 max_turns: 30
 timeout_seconds: 900

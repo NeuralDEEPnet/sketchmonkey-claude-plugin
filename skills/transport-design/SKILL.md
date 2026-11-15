@@ -1,6 +1,6 @@
 ---
 name: transport-design
-description: Transport and vehicle design with SketchMonkey, for cars, motorcycles, e-bikes, scooters, trucks, buses, trains, aircraft cabins, eVTOLs, boats and small autonomous shuttles. Takes a vehicle from package and proportions to a consistent set of side, front three-quarter, rear three-quarter, interior and detail renders, and on to turntable videos. Use for requests like 'design an electric city car', 'sketch a cafe-racer motorcycle', 'show me a tram for our city', 'interior for a sleeper train', 'concept for a two-seat eVTOL' or 'what could our e-bike look like'.
+description: Transport and vehicle design with SketchMonkey, for cars, motorcycles, e-bikes, scooters, trucks, buses, trains, aircraft cabins, eVTOLs, boats and small autonomous shuttles. Takes a vehicle from layout and proportions to a consistent set of side, front three-quarter, rear three-quarter, interior and detail renders, and on to turntable videos. Use for requests like 'design an electric city car', 'sketch a cafe-racer motorcycle', 'show me a tram for our city', 'interior for a sleeper train', 'concept for a two-seat eVTOL' or 'what could our e-bike look like'.
 ---
 
 # Transport design
@@ -9,9 +9,9 @@ Help people design vehicles the way a transport design studio does: proportions 
 
 **Essentials:** short replies with results first, plain words, one question at most, honest results with every link copied exactly as returned, and two or three next steps at the end. Each image uses one render from the person's allowance; a full view set is five renders, so confirm before starting it. The full house rules are in the `studio` skill.
 
-## Step 1: Write the vehicle package (free)
+## Step 1: Write the vehicle specification (free)
 
-Before any render, write a package of 80 to 140 words. It plays the role the product fingerprint plays in `product-shots`, and it goes into every prompt so every view shows the same vehicle.
+Before any render, write a specification of 80 to 140 words. It plays the role the product fingerprint plays in `product-shots`, and it goes into every prompt so every view shows the same vehicle.
 
 - **Type and mission:** what it is, who rides in it, where and how far ("two-seat urban electric city car for 30 km daily commutes and tight parking").
 - **Layout and drivetrain:** seats and layout (1+1, 2+2, 3 rows, cab-forward), drive (electric skateboard, mid-engine, in-wheel motors, pantograph, sail), wheels or hull or rotors.
@@ -25,7 +25,7 @@ Ask one question if the mission or size is unclear; otherwise state what you ass
 
 ## Step 2: Explore directions (free)
 
-For a new vehicle, call `generate_directions` with the package as the `brief`, and present the five directions as a short board, the same way `explore-concepts` does. Read each lens for vehicles:
+For a new vehicle, call `generate_directions` with the specification as the `brief`, and present the five directions as a short board, the same way `explore-concepts` does. Read each lens for vehicles:
 
 | Lens | As a vehicle |
 |---|---|
@@ -35,7 +35,7 @@ For a new vehicle, call `generate_directions` with the package as the `brief`, a
 | Zola | Dramatic and sculptural; faceted surfaces, aggressive stance |
 | Nova | Organic and experimental; flowing biomimetic surfaces |
 
-The tool's materials, palettes and rationale are written for gadgets (CNC aluminium, moulded polymer, bronze, marble). Use only each direction's mood and form language, say so in one line, and keep the materials and colours from the vehicle package or the ones the person chose.
+The tool's materials, palettes and rationale are written for gadgets (CNC aluminium, moulded polymer, bronze, marble). Use only each direction's mood and form language, say so in one line, and keep the materials and colours from the vehicle specification or the ones the person chose.
 
 Skip this step when the person already knows the look they want.
 
@@ -53,9 +53,9 @@ Start with the side profile alone when proportions are still open, review it wit
 
 Write each prompt yourself:
 
-> **[view]** of **[full vehicle package]**. **[direction's design language]**. **[setting]**. **[lighting]**. **[camera and lens]**. Photorealistic transport design render, no text, no badges, no logos, no licence plate characters.
+> **[view]** of **[full vehicle specification]**. **[direction's design language]**. **[setting and ground]**. **[lighting]**. **[camera and lens]**. Photorealistic transport design render, no text, no badges, no logos, no licence plate characters.
 
-Keep the closing words "transport design render" in every prompt. SketchMonkey reads them to switch from product and room wording to transport wording, which is what keeps a car body from being described like a gadget or a cabin like a room.
+Keep the closing words "transport design render" in every prompt. SketchMonkey reads them to describe the image as a vehicle, with transport design terms for the body, glass and cabin; without them a car body can be described like a gadget, or a cabin like a room.
 
 Call `render_concept` with:
 - `prompt`: the prompt above.
@@ -67,12 +67,12 @@ Start all renders in the set, then poll each `jobId` with `get_job` about every 
 
 ## Step 4: Keep it the same vehicle
 
-Once the person likes a front three-quarter render, offer to save the vehicle with `save_subject_model`: `kind: "car"` (use it for any vehicle), a short `name`, the package as `identityLock`, the must-not-change traits as `immutableTraits`, and the render's `imageUrl` as `heroImageUrl`. Pass the returned ID as `subjectModelId` in later renders and videos so the studio conditions on that image. Say plainly that this improves consistency but doesn't guarantee identical results.
+Once the person likes a front three-quarter render, offer to save the vehicle with `save_subject_model`: `kind: "car"` (the kind SketchMonkey uses for every vehicle type), a short `name`, the specification as `identityLock`, the must-not-change traits as `immutableTraits`, and the render's `imageUrl` as `heroImageUrl`. Pass the returned ID as `subjectModelId` in later renders and videos so the studio conditions on that image. Say plainly that this improves consistency but doesn't guarantee identical results.
 
 ## Step 5: Review like a studio
 
 Look at every render before replying. Check, view by view:
-- **Proportions:** wheelbase, overhangs and wheel size match the package; nothing stretched.
+- **Proportions:** wheelbase, overhangs and wheel size match the specification; nothing stretched.
 - **Stance:** wheels fill the arches, sit on the ground, and match each other.
 - **Consistency:** the lamp graphic, glass shape and feature lines match across views.
 - **Stray text:** badges, plate characters or warped lettering.
@@ -83,10 +83,10 @@ Present the set as a contact sheet: view name, one line on what it shows, and `[
 
 - A 360° turntable or a smooth side-profile glide (`turnaround-video`; `cameraPreset` `industrial_turntable` or `lateral_profile`).
 - Colour and trim options: paint, cladding, wheels and interior textiles (`cmf-board`).
-- A design-intent package for engineering or a CAD model (`engineering-handoff`).
+- A design-intent brief for engineering or a CAD model (`engineering-handoff`).
 - Launch visuals and a reveal campaign (`campaign`).
 
 ## Boundaries
 
 - Design original vehicles. Don't copy a real manufacturer's signature grille, lamp graphic, badge or name; describe the qualities the person likes instead ("a long-bonnet grand tourer feel"). Label studies of existing vehicles "unofficial concept".
-- Renders are design proposals. They are not crash, aerodynamic, homologation or airworthiness evidence, and they don't confirm that the package fits real people, batteries or engines.
+- Renders are design proposals. They are not crash, aerodynamic, homologation or airworthiness evidence, and they don't confirm that the layout fits real people, batteries or engines.

@@ -1,6 +1,6 @@
 # Process guide
 
-Typical starting values for design-intent packages. They are rules of thumb to start a conversation with an engineer or supplier; every value is "to confirm".
+Typical starting values for design-intent briefs. They are rules of thumb to start a conversation with an engineer or supplier; every value is "to confirm".
 
 ## Choosing a process by quantity
 

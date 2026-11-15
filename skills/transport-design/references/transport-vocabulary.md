@@ -2,11 +2,11 @@
 
 Use the term in render prompts, where it helps the image model, and the plain meaning when talking to people.
 
-## Proportion and package
+## Proportion and layout
 
 | Term | Plain meaning | Prompt tip |
 |---|---|---|
-| Package | Where people, batteries or engine, luggage and wheels sit | Describe seats and layout before styling |
+| Layout | Where people, batteries or engine, luggage and wheels sit | Describe seats and layout before styling |
 | Wheelbase | Distance between front and rear axles | Give it as a share of overall length ("wheelbase about 70% of length") |
 | Overhang | Body that sticks out past the wheels, front and rear | "Very short overhangs" reads modern and agile |
 | Dash-to-axle | Distance from the windscreen base to the front axle | Long dash-to-axle reads premium, rear-drive and powerful |

@@ -1,5 +1,5 @@
 ---
-description: A handoff request gets a design-intent package with parts, materials and processes suited to the volume, targets marked to confirm, and compliance as topics rather than approvals.
+description: A handoff request gets a design-intent brief with parts, materials and processes suited to the volume, targets marked to confirm, and compliance as topics rather than approvals.
 tags: [engineering-handoff]
 max_turns: 15
 timeout_seconds: 600
