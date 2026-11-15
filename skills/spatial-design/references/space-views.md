@@ -1,6 +1,6 @@
 # Space view recipes
 
-Each recipe gives the camera and light part of the prompt. Put the full space package and the design language in front of it, and end with "Photorealistic spatial design render, no text, no logos, no signage lettering, no people."
+Each recipe gives the camera and light part of the prompt. Put the full space specification and the design language in front of it, and end with "Photorealistic spatial design render, no text, no logos, no signage lettering, no people."
 
 ## Light that makes a space read
 
@@ -39,7 +39,7 @@ Each recipe gives the camera and light part of the prompt. Put the full space pa
 
 ## Rooms a product lives in
 
-- For a room built around one product (a speaker, a lamp, a kettle), describe the room as the space package and the product as what is on show, with its position ("on the oak sideboard, left of centre").
+- For a room built around one product (a speaker, a lamp, a kettle), describe the room as the space specification and the product as what is on show, with its position ("on the oak sideboard, left of centre").
 - When the product must stay exactly true to a real photo, render the room here and place the product with the `photo-edit` skill instead.
 
 ## Social formats

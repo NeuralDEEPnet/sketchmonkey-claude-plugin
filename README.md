@@ -2,7 +2,7 @@
 
 ![SketchMonkey](assets/icon.png)
 
-SketchMonkey Design Studio brings an industrial, transport, packaging and spatial design studio into Claude. Describe a product, vehicle, pack or space, share a photo of it, or start from an idea, and Claude works with your SketchMonkey account to take it from brief to launch: explore five design directions, render concepts and full vehicle view sets, design the packaging and the stand or shop it is sold from, review designs like a studio lead, build colour-material-finish boards, prepare design-intent packages for engineering, create studio-quality product shots, render 360° videos and lay out launch campaigns. Everything is guided in plain language, so you don't need design software or design training.
+SketchMonkey Design Studio brings an industrial, transport, packaging and spatial design studio into Claude. Describe a product, vehicle, pack or space, share a photo of it, or start from an idea, and Claude works with your SketchMonkey account to take it from brief to launch: explore five design directions, render concepts and full vehicle view sets, design the packaging and the stand or shop it is sold from, review designs like a studio lead, build colour-material-finish boards, prepare design-intent briefs for engineering, create studio-quality product shots, render 360° videos and lay out launch campaigns. Everything is guided in plain language, so you don't need design software or design training.
 
 ## What you can do
 
@@ -16,23 +16,23 @@ SketchMonkey Design Studio brings an industrial, transport, packaging and spatia
 | "Make a launch campaign for my product" | `/sketchmonkey:campaign` | Poster, square, story and banner layouts with real copy, editable afterwards |
 | "Set up our brand colours and voice" | `/sketchmonkey:brand-kit` | Saved brand rules, on-brand headline options and typography alternatives |
 | "Make a 360° spin for Instagram Stories" | `/sketchmonkey:turnaround-video` | Short product videos with turntable, reveal, macro and other camera moves |
-| "Design a two-seat electric city car" | `/sketchmonkey:transport-design` | A vehicle package, then side, three-quarter, interior and detail views of the same vehicle |
+| "Design a two-seat electric city car" | `/sketchmonkey:transport-design` | A vehicle specification, then side, three-quarter, interior and detail views of the same vehicle |
 | "Design a gift box for my candle" | `/sketchmonkey:packaging-design` | A pack specification, then front, three-quarter, open and shelf views of the same pack |
-| "Design a pop-up shop for our launch" | `/sketchmonkey:spatial-design` | A space package, then overview, eye-level, fixture and plan views of the same space |
+| "Design a pop-up shop for our launch" | `/sketchmonkey:spatial-design` | A space specification, then overview, eye-level, fixture and plan views of the same space |
 | "Take my kettle idea all the way to launch" | `/sketchmonkey:design-program` | A phased studio program with an allowance plan, checkpoints and a design log |
 | "Critique this concept before the client sees it" | `/sketchmonkey:design-review` | A focused studio crit with the top three changes, and an optional corrected render |
-| "Get this ready for a manufacturer" | `/sketchmonkey:engineering-handoff` | A design-intent package: dimensions, parts, materials, processes and open questions |
+| "Get this ready for a manufacturer" | `/sketchmonkey:engineering-handoff` | A design-intent brief: dimensions, parts, materials, processes and open questions |
 
 You don't have to type the commands. Ask in your own words and Claude picks the right workflow.
 
 ## Get started
 
-1. **Install the plugin**
-   - **Claude app (web, desktop, mobile):** open **Customize → Plugins**. Install SketchMonkey Design Studio from the directory once it's listed, or choose **Add → Add marketplace**, enter `NeuralDEEPnet/sketchmonkey-claude-plugin` and install it from there.
-   - **Claude Code:** run `/plugin marketplace add NeuralDEEPnet/sketchmonkey-claude-plugin`, then `/plugin install sketchmonkey@neuraldeep`.
+1. **Add the plugin**
+   - **Claude app (web, desktop, mobile):** open **Customize → Plugins**. Add SketchMonkey Design Studio from the directory once it's listed, or choose **Add → Add marketplace** and enter `NeuralDEEPnet/sketchmonkey-claude-plugin`.
+   - **Claude Code:** use `/plugin marketplace add NeuralDEEPnet/sketchmonkey-claude-plugin` and `/plugin install sketchmonkey@neuraldeep`.
 2. **Connect your SketchMonkey account**
    - **Claude app:** open the plugin's **Connectors** tab, select **Connect**, sign in to SketchMonkey and approve access.
-   - **Claude Code:** run `/mcp`, choose the SketchMonkey server from this plugin and select **Authenticate**.
+   - **Claude Code:** use `/mcp`, choose the SketchMonkey server from this plugin and select **Authenticate**.
 3. **Try a prompt**
    - "Make a white-background listing photo and a cosy kitchen scene of my ceramic pour-over dripper with a walnut base."
    - "Explore five design directions for a compact recycled-aluminium desk lamp."
@@ -49,7 +49,7 @@ You need a SketchMonkey account; sign up at [sketchmonkey.design](https://www.sk
 - **Allowance.** Exploring directions, polishing prompts, CMF tables, layouts and text edits are free. Each image render and each video render counts toward your SketchMonkey plan's limits, and Claude checks before large batches. Plans and billing are managed only on the SketchMonkey website; this plugin never asks for payment details.
 - **Exports.** Campaign and CMF layouts are saved in your SketchMonkey project. Asking for export details returns sizes and image links; the plugin doesn't produce finished PNG or PDF files.
 - **Words in images.** Renders can't reliably letter a name on a box or a sign. Packs and stands are designed with blank zones, and the campaign layouts add real, editable type on top.
-- **Concepts, not engineering.** Concept renders, material suggestions and design-intent packages are design proposals, not certified CAD, engineering analysis, print-ready artwork, measured drawings, safety or type approval, or manufacturing approval. When a CAD connector is also connected in Claude, the handoff skill can pass the package to it.
+- **Concepts, not engineering.** Concept renders, material suggestions and design-intent briefs are design proposals, not certified CAD, engineering analysis, print-ready artwork, measured drawings, safety or type approval, or manufacturing approval. When a CAD connector is also connected in Claude, the handoff skill can pass the brief to it.
 
 ## What the plugin runs and sends
 

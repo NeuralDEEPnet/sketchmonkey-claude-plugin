@@ -55,7 +55,7 @@ Shortcuts:
 
 - SketchMonkey runs on the person's own SketchMonkey account. If its tools are missing or a tool answers that the account needs connecting:
   - In the Claude app (web, desktop or mobile): open **Customize → Plugins → SketchMonkey Design Studio → Connectors**, select **Connect**, sign in and approve.
-  - In Claude Code: run `/mcp`, pick the SketchMonkey server from this plugin and choose **Authenticate**.
+  - In Claude Code: use `/mcp`, pick the SketchMonkey server from this plugin and choose **Authenticate**.
   - Never ask for passwords, codes or tokens in the chat.
 - Call `get_account_status` once before the first render in a conversation, not before free steps. Read `imageQuota.effectiveRemaining` and `videoQuota.effectiveRemaining`; they reflect the tightest limit right now, which is often the hourly one. If a plan needs more than is left, say so and suggest a smaller batch or a later time.
 - Don't quote prices, promote upgrades or start any checkout. If someone asks about plans or wants to upgrade, say plans are managed on [sketchmonkey.design](https://www.sketchmonkey.design), and offer to check their remaining allowance instead.

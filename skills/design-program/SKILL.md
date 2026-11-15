@@ -48,7 +48,7 @@ Follow the named skill's own steps for each phase; this skill only sequences the
 2. Add a **decision line**: what was chosen and why, in one sentence ("Direction: Ren, for its calm precision; matte sage body, oak handle").
 3. Ask one checkpoint question: continue, refine, or go back.
 
-Carry decisions forward. For a product, the chosen direction's palette and materials go into every later prompt. For a vehicle, the direction contributes only its mood and form language, because the tool's materials are written for gadgets; the vehicle package's own colours and materials stay in force. The product fingerprint or vehicle package from phase 2 is reused unchanged. After the concept is approved, offer to save it with `save_subject_model` (it stores a reference in their account) and, once they agree, pass the returned ID as `subjectModelId` so later visuals and video stay on model. When the direction is final, call `select_direction`, and always pass `directionId` to `create_campaign`.
+Carry decisions forward. For a product, the chosen direction's palette and materials go into every later prompt. For a vehicle, the direction contributes only its mood and form language, because the tool's materials are written for gadgets; the vehicle specification's own colours and materials stay in force. The product fingerprint or vehicle specification from phase 2 is reused unchanged. After the concept is approved, offer to save it with `save_subject_model` (it stores a reference in their account) and, once they agree, pass the returned ID as `subjectModelId` so later visuals and video stay on model. When the direction is final, call `select_direction`, and always pass `directionId` to `create_campaign`.
 
 ## Step 5: The design log
 

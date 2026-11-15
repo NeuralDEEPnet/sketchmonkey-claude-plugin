@@ -1,5 +1,5 @@
 ---
-description: A vehicle brief gets a package reused in every prompt, widescreen side and front three-quarter renders, no surreal preset, polling and exact links.
+description: A vehicle brief gets a specification reused in every prompt, widescreen side and front three-quarter renders, no surreal preset, polling and exact links.
 tags: [transport-design]
 max_turns: 30
 timeout_seconds: 900

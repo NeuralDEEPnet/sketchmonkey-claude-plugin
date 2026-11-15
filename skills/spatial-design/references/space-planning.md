@@ -1,6 +1,6 @@
 # Space planning: sizes, sightlines and plain words
 
-Use these numbers as starting points in the space package, and say they are typical values to confirm on site.
+Use these numbers as starting points in the space specification, and say they are typical values to confirm on site.
 
 ## Typical sizes
 
@@ -28,7 +28,7 @@ Use these numbers as starting points in the space package, and say they are typi
 - **Group in odd numbers.** Three or five products per plinth or shelf read better than two or four.
 - **Leave air.** Half-empty shelves look premium; full shelves look like a stockroom.
 - **Light the product, not the floor.** Warm spots (about 2700 to 3000 K) on the products, softer light elsewhere.
-- **Hide the practical things.** Name storage, bins and cables in the package ("lockable storage inside the counter") so the render leaves room for them.
+- **Hide the practical things.** Name storage, bins and cables in the specification ("lockable storage inside the counter") so the render leaves room for them.
 
 ## Plain words for trade terms
 

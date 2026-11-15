@@ -1,6 +1,6 @@
 # Vehicle view recipes
 
-Each recipe gives the camera, setting and lighting part of the prompt. Put the full vehicle package and the design language in front of it, and end with "Photorealistic transport design render, no text, no badges, no logos, no licence plate characters."
+Each recipe gives the camera, setting and lighting part of the prompt. Put the full vehicle specification and the design language in front of it, and end with "Photorealistic transport design render, no text, no badges, no logos, no licence plate characters."
 
 ## Studio lighting that makes surfaces read
 
@@ -39,7 +39,7 @@ Each recipe gives the camera, setting and lighting part of the prompt. Put the f
 
 - Exterior three-quarter on a clean apron or in flight against soft sky: "front three-quarter, slightly above wing level, 70 mm lens."
 - Cabin: "cabin view down the aisle from the front monument, seats in rows, window light."
-- Keep rotor, propeller and wing counts in the package and repeat them; image models often add or drop them.
+- Keep rotor, propeller and wing counts in the specification and repeat them; image models often add or drop them.
 
 ## Boats and yachts
 
