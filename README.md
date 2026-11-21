@@ -29,7 +29,7 @@ You don't have to type the commands. Ask in your own words and Claude picks the 
 
 1. **Add the plugin**
    - **Claude app (web, desktop, mobile):** open **Customize → Plugins**. Add SketchMonkey Design Studio from the directory once it's listed, or choose **Add → Add marketplace** and enter `NeuralDEEPnet/sketchmonkey-claude-plugin`.
-   - **Claude Code:** use `/plugin marketplace add NeuralDEEPnet/sketchmonkey-claude-plugin` and `/plugin install sketchmonkey@neuraldeep`.
+   - **Claude Code:** add the `NeuralDEEPnet/sketchmonkey-claude-plugin` marketplace and install the `sketchmonkey` plugin from it, following Claude Code's own [plugin install guide](https://code.claude.com/docs/en/plugins/install).
 2. **Connect your SketchMonkey account**
    - **Claude app:** open the plugin's **Connectors** tab, select **Connect**, sign in to SketchMonkey and approve access.
    - **Claude Code:** use `/mcp`, choose the SketchMonkey server from this plugin and select **Authenticate**.
