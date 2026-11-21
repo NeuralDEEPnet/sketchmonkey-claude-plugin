@@ -28,8 +28,8 @@ You don't have to type the commands. Ask in your own words and Claude picks the 
 ## Get started
 
 1. **Add the plugin**
-   - **Claude app (web, desktop, mobile):** open **Customize → Plugins**. Add SketchMonkey Design Studio from the directory once it's listed, or choose **Add → Add marketplace** and enter `NeuralDEEPnet/sketchmonkey-claude-plugin`.
-   - **Claude Code:** add the `NeuralDEEPnet/sketchmonkey-claude-plugin` marketplace and install the `sketchmonkey` plugin from it, following Claude Code's own [plugin install guide](https://code.claude.com/docs/en/plugins/install).
+   - **Claude app (web, desktop, mobile):** open **Customize → Plugins** and add SketchMonkey Design Studio from the plugin directory.
+   - **Claude Code:** open the plugin directory with Claude Code's plugin manager and add SketchMonkey Design Studio there. Claude Code's own [plugin guide](https://code.claude.com/docs/en/plugins/install) explains how.
 2. **Connect your SketchMonkey account**
    - **Claude app:** open the plugin's **Connectors** tab, select **Connect**, sign in to SketchMonkey and approve access.
    - **Claude Code:** use `/mcp`, choose the SketchMonkey server from this plugin and select **Authenticate**.
@@ -96,4 +96,4 @@ Visit [sketchmonkey.design/support](https://www.sketchmonkey.design/support) or 
 
 The skills and files in this plugin are open source under the [MIT License](LICENSE); you're welcome to adapt them. Using the SketchMonkey service itself is governed by the [SketchMonkey Terms of Service](https://www.sketchmonkey.design/terms).
 
-Contributions are welcome: open an issue or pull request on [GitHub](https://github.com/NeuralDEEPnet/sketchmonkey-claude-plugin). The `evals/` folder holds a `claude plugin eval` suite with mocked SketchMonkey tools, so changes to the skills can be tested without spending renders.
+Contributions are welcome: open an issue or pull request on [GitHub](https://github.com/NeuralDEEPnet/sketchmonkey-claude-plugin).
