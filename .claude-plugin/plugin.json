@@ -1,7 +1,6 @@
 {
   "name": "sketchmonkey",
-  "displayName": "SketchMonkey Design Studio",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "Your industrial, transport, packaging and spatial design studio inside Claude. Take a product, vehicle, pack, space, photo or idea from brief to launch: design directions, concept renders and vehicle view sets, packaging and unboxing, retail stands and showrooms, studio design reviews, colour-material-finish boards, engineering handoff briefs, studio-quality product shots, product-faithful photo edits, launch campaigns and 360° videos, rendered through your SketchMonkey account.",
   "author": {
     "name": "Neural Deep Network Ltd",
@@ -29,8 +28,5 @@
     "interior-design"
   ],
   "icon": "./assets/icon.png",
-  "documentationUrl": "https://www.sketchmonkey.design/mcp-server",
-  "supportUrl": "https://www.sketchmonkey.design/support",
-  "privacyPolicyUrl": "https://www.sketchmonkey.design/privacy",
-  "termsOfServiceUrl": "https://www.sketchmonkey.design/terms"
+  "privacyPolicyUrl": "https://www.sketchmonkey.design/privacy"
 }
