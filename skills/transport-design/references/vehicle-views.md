@@ -26,7 +26,7 @@ Each recipe gives the camera, setting and lighting part of the prompt. Put the f
 - Side profile is the hero; use "pure side view, camera at wheel-centre height, long lens".
 - Front three-quarter from slightly low ("camera at knee height") to give presence.
 - Detail: tank and seat junction, headlamp, drivetrain or battery integration.
-- Ratios: `16:9` or `3:2` for side views, `4:3` for three-quarters, `3:4` for social.
+- Ratios: `16:9` or `3:2` for side views, `4:3` for three-quarters, `3:4` for portrait boards.
 
 ## Trains and trams
 

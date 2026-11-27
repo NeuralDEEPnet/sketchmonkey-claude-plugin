@@ -1,6 +1,6 @@
 ---
 name: packaging-design
-description: Packaging design with SketchMonkey, for boxes, cartons, sleeves, labels, bottles and jars, pouches, tins, gift sets, mailer boxes and the unboxing moment. Takes packaging from a written pack specification (format, size, material, print finishes and what goes on each face) to a consistent set of front, three-quarter, open and shelf views, and on to unboxing videos and a brief for a packaging supplier. Use for requests like 'design a box for my candle', 'what could our tea tin look like', 'make a gift set for the launch', 'design a label for my hot sauce', 'show the unboxing' or 'how would this look on a shelf'.
+description: Packaging design with SketchMonkey, for boxes, cartons, sleeves, labels, bottles and jars, pouches, tins, gift sets, mailer boxes and the unboxing moment. Takes packaging from a written pack specification (format, size, material, print finishes and what goes on each face) to a consistent set of front, three-quarter, open and shelf views, and on to a brief for a packaging supplier. Use for requests like 'design a box for my candle', 'what could our tea tin look like', 'make a gift set for the launch', 'design a label for my hot sauce', 'show the unboxing' or 'how would this look on a shelf'.
 ---
 
 # Packaging design
@@ -11,9 +11,9 @@ Help people design packaging the way a packaging designer does: the format and s
 
 ## Step 1: Write the pack specification (free)
 
-Before any render, write a specification of 70 to 130 words. It plays the role the product fingerprint plays in `product-shots`, and it goes into every prompt so every view shows the same pack.
+Before any render, write a specification of 70 to 130 words. It plays the role the design fingerprint plays in `design-views`, and it goes into every prompt so every view shows the same pack.
 
-- **Product and channel:** what goes inside, its size and weight, and where the pack is seen first (shelf, online listing, gift, delivery).
+- **Product and channel:** what goes inside, its size and weight, and where the pack is seen first (shelf, online, gift, delivery).
 - **Format:** the structure in plain words ("rigid two-piece box with a lift-off lid", "tuck-end folding carton", "kraft mailer with a printed sleeve"). Formats and when to use them are in `${CLAUDE_SKILL_DIR}/references/pack-formats.md` (the `references` folder next to this file).
 - **Outer size:** width, depth and height in millimetres, from the product size plus protection.
 - **Material and finish:** board or substrate, colour, and print finishes ("uncoated 350 gsm cream board, one-colour print, blind-embossed mark on the lid").
@@ -43,7 +43,7 @@ Skip this step when the person already knows the look they want.
 
 The standard set, in this order:
 
-1. **Front**, `4:3`: straight-on packshot of the main face. The design check.
+1. **Front**, `4:3`: straight-on view of the main face. The design check.
 2. **Three-quarter**, `4:3`: the hero, showing front, side and top.
 3. **Open**, `4:3`: lid off or flaps open, the product in its insert.
 4. **In context**, `16:9`: on a shelf among neutral neighbours, or on a doorstep or desk for delivery packs.
@@ -52,13 +52,13 @@ Start with the front alone when the design is still open, review it with the per
 
 Write each prompt yourself:
 
-> **[view]** of **[full pack specification]**. **[direction's design language]**. **[setting and surface]**. **[lighting]**. **[camera and lens]**. Photorealistic packaging photograph, true-to-material, blank label areas, no readable text, no logos, no barcodes.
+> **[view]** of **[full pack specification]**. **[direction's design language]**. **[setting and surface]**. **[lighting]**. **[camera and lens]**. Photorealistic packaging design visualisation, true-to-material, blank label areas, no readable text, no logos, no barcodes.
 
 Call `render_concept` with:
 - `prompt`: the prompt above.
 - `preset`: `kai` for most packaging; it adds polished, retail-ready styling. Leave `preset` out for uncoated, kraft and moulded-fibre packs, so your prompt alone sets the look. `zola` only for moody key visuals. Avoid `ren`, `maya` and `nova` here: they add hard-surface, screen-like or glitch effects that don't suit board and paper.
 - `autoEnhance: false`, because the prompt is complete.
-- `aspectRatio` from the list above. For a `1:1` listing image, also write "square 1:1 format" in the prompt.
+- `aspectRatio` from the list above. For a `1:1` square view, also write "square 1:1 format" in the prompt.
 
 Start all renders in the set, then poll each `jobId` with `get_job` about every 15 seconds.
 
@@ -66,7 +66,7 @@ Start all renders in the set, then poll each `jobId` with `get_job` about every 
 
 ## Step 4: Keep it the same pack
 
-Once the person likes the three-quarter render, offer to save the pack with `save_subject_model`: `kind: "object"`, a short `name`, the specification as `identityLock`, the must-not-change traits as `immutableTraits`, and the render's `imageUrl` as `heroImageUrl`. Pass the returned ID as `subjectModelId` in later renders and videos. Say plainly that this improves consistency but doesn't guarantee identical results.
+Once the person likes the three-quarter render, offer to save the pack with `save_subject_model`: `kind: "object"`, a short `name`, the specification as `identityLock`, the must-not-change traits as `immutableTraits`, and the render's `imageUrl` as `heroImageUrl`. Pass the returned ID as `subjectModelId` in later renders. Say plainly that this improves consistency but doesn't guarantee identical results.
 
 ## Step 5: Review like a studio
 
@@ -83,9 +83,8 @@ Keep the reply to one phone screen. Lead with the views; don't repeat the pack s
 
 ## Step 6: Next steps
 
-- An unboxing or reveal video (`turnaround-video`; a `static_tripod` lid lift or a slow `push_in` on the open box).
 - Colour and finish options for a range: three flavours, sizes or tiers (`cmf-board`).
-- The real name and copy on a poster, post or listing image (`campaign`).
+- The real name and copy on a presentation board or poster (`campaign`).
 - A shop shelf or a pop-up stand to show it on (`spatial-design`).
 - A brief for a packaging supplier: sizes, board, print and finish per part, quantities and open questions (`engineering-handoff`).
 

@@ -1,7 +1,7 @@
 {
   "name": "sketchmonkey",
-  "version": "1.2.6",
-  "description": "Your industrial, transport, packaging and spatial design studio inside Claude. Take a product, vehicle, pack, space, photo or idea from brief to launch: design directions, concept renders and vehicle view sets, packaging and unboxing, retail stands and showrooms, studio design reviews, colour-material-finish boards, engineering handoff briefs, studio-quality product shots, product-faithful photo edits, launch campaigns and 360° videos, rendered through your SketchMonkey account.",
+  "version": "2.0.0",
+  "description": "A design guide and studio for physical products, vehicles, packaging and spaces, inside Claude. Take a product, vehicle, pack or space from brief to sign-off: frame the brief, explore five design directions, see concept visuals and consistent view sets, build colour-material-finish boards, run studio design reviews, prepare engineering handoff briefs and lay out presentation boards, through your SketchMonkey account.",
   "author": {
     "name": "Neural Deep Network Ltd",
     "email": "3d@neuraldeep.net",
@@ -11,21 +11,20 @@
   "repository": "https://github.com/NeuralDEEPnet/sketchmonkey-claude-plugin",
   "license": "MIT",
   "keywords": [
-    "product-photography",
     "product-design",
     "industrial-design",
+    "design-guide",
+    "design-studio",
+    "concept-design",
     "cmf",
-    "concept-art",
-    "marketing-campaign",
-    "product-video",
-    "ecommerce",
-    "transport-design",
-    "automotive-design",
     "design-review",
     "design-handoff",
+    "transport-design",
+    "automotive-design",
     "packaging-design",
     "retail-design",
-    "interior-design"
+    "interior-design",
+    "presentation-boards"
   ],
   "icon": "./assets/icon.png",
   "privacyPolicyUrl": "https://www.sketchmonkey.design/privacy"

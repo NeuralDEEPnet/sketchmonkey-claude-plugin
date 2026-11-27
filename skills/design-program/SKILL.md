@@ -1,9 +1,9 @@
 ---
 name: design-program
-description: Runs a complete product or vehicle design program from brief to launch with SketchMonkey, the way an industrial design studio would, through research framing, design directions, concept renders, design review, colour-material-finish, engineering handoff, product visuals, video and launch campaign. Use when someone wants the whole journey rather than one deliverable, for example 'take my idea from sketch to launch', 'run a full design project for a new kettle', 'end-to-end design of an e-scooter', 'we need the whole design process for our product' or 'act as our design studio'.
+description: Runs a complete product or vehicle design program from brief to sign-off with SketchMonkey, the way an industrial design studio would, through research framing, design directions, concept visuals, design review, colour-material-finish, design views, engineering handoff and presentation boards. Use when someone wants the whole journey rather than one deliverable, for example 'take my idea from sketch to sign-off', 'run a full design project for a new kettle', 'end-to-end design of an e-scooter', 'we need the whole design process for our product' or 'act as our design studio'.
 ---
 
-# Design program: brief to launch
+# Design program: brief to sign-off
 
 Act as the studio's design lead. Plan the whole journey, keep one project, and move phase by phase with a short checkpoint after each. The person stays in charge of every decision; you keep the momentum.
 
@@ -21,7 +21,7 @@ From what the person has said, write a short brief with these headings: one line
 
 ## Step 2: Plan the program and the allowance
 
-Show the plan as a short table, give the total as one line ("about 10 to 16 images and one video"), and end with either a go-ahead request or the one question that matters most, never both and never more than one question.
+Show the plan as a short table, give the total as one line ("about 10 to 16 images"), and end with either a go-ahead request or the one question that matters most, never both and never more than one question.
 
 | Phase | Skill | Renders (estimate) |
 |---|---|---|
@@ -29,12 +29,11 @@ Show the plan as a short table, give the total as one line ("about 10 to 16 imag
 | 2. Concepts | same skill | 2 to 5 images |
 | 3. Review and refine | `design-review` | 0 to 2 images |
 | 4. Colour, material and finish | `cmf-board` | 0 to 3 images |
-| 5. Engineering handoff | `engineering-handoff` | 0 |
-| 6. Product visuals | `product-shots` | 3 images |
-| 7. Video | `turnaround-video` | 1 video |
-| 8. Launch | `campaign`, `brand-kit` | 0 |
+| 5. Design views | `design-views` | 3 images |
+| 6. Engineering handoff | `engineering-handoff` | 0 |
+| 7. Presentation boards | `campaign`, `brand-kit` | 0 |
 
-Before the first render, call `get_account_status` once and compare the estimate with `imageQuota.effectiveRemaining` and `videoQuota.effectiveRemaining`. If the whole plan doesn't fit, propose a lean version (for example two concepts and one video) or spreading phases over days. Let the person skip or reorder phases. Offer `packaging-design` (2 to 4 images) as an extra phase after product visuals when the product ships in a pack, and a stand or shop in `spatial-design` (2 to 4 images) when the launch needs one; leave them out of the first plan unless the person mentioned them.
+Before the first render, call `get_account_status` once and compare the estimate with `imageQuota.effectiveRemaining`. If the whole plan doesn't fit, propose a lean version (for example two concepts and one view) or spreading phases over days. Let the person skip or reorder phases. Offer `packaging-design` (2 to 4 images) as an extra phase after the design views when the product ships in a pack, and a stand or shop in `spatial-design` (2 to 4 images) when the project needs one; leave them out of the first plan unless the person mentioned them.
 
 ## Step 3: Open one project
 
@@ -48,7 +47,7 @@ Follow the named skill's own steps for each phase; this skill only sequences the
 2. Add a **decision line**: what was chosen and why, in one sentence ("Direction: Ren, for its calm precision; matte sage body, oak handle").
 3. Ask one checkpoint question: continue, refine, or go back.
 
-Carry decisions forward. For a product, the chosen direction's palette and materials go into every later prompt. For a vehicle, the direction contributes only its mood and form language, because the tool's materials are written for gadgets; the vehicle specification's own colours and materials stay in force. The product fingerprint or vehicle specification from phase 2 is reused unchanged. After the concept is approved, offer to save it with `save_subject_model` (it stores a reference in their account) and, once they agree, pass the returned ID as `subjectModelId` so later visuals and video stay on model. When the direction is final, call `select_direction`, and always pass `directionId` to `create_campaign`.
+Carry decisions forward. For a product, the chosen direction's palette and materials go into every later prompt. For a vehicle, the direction contributes only its mood and form language, because the tool's materials are written for gadgets; the vehicle specification's own colours and materials stay in force. The design fingerprint or vehicle specification from phase 2 is reused unchanged. After the concept is approved, offer to save it with `save_subject_model` (it stores a reference in their account) and, once they agree, pass the returned ID as `subjectModelId` so later visuals stay on model. When the direction is final, call `select_direction`, and always pass `directionId` to `create_campaign`.
 
 ## Step 5: The design log
 
