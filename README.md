@@ -72,7 +72,7 @@ These are the connector tools the skills use.
 | `inspect_artboard` | Reads a layout's text, style and layers | No |
 | `generate_variants` | Suggests copy or typography alternatives for a layout | No |
 | `get_artboard_export_metadata` | Returns layout sizes and background image links | No |
-| `get_job`, `get_render_status` | Check a render and return the finished image | No |
+| `get_job` | Check a render and return the finished image | No |
 | `render_concept` | Starts a design render (uses render allowance) | Creates a render |
 | `create_project` | Creates a design project | Creates |
 | `create_campaign` | Creates campaign layouts in a project | Creates |
