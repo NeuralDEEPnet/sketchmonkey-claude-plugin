@@ -1,11 +1,11 @@
 ---
 name: brand-kit
-description: Saves a brand's colours, tone of voice and banned styles to a SketchMonkey project, checks copy against those rules, and creates on-brand headline and typography alternatives for campaign layouts. Use for 'set up our brand colours', 'apply our brand guidelines', 'is this tagline on-brand', 'give me three headline options' or 'try different fonts on the poster'.
+description: Saves a brand's colours, tone of voice and banned styles to a SketchMonkey project, checks copy against those rules, and writes on-brand headline alternatives for SketchMonkey campaign layouts. Use for 'set up our brand colours in SketchMonkey', 'apply our brand guidelines to the project', 'is this tagline on-brand' or 'give me three on-brand headline options'.
 ---
 
 # Brand kit
 
-Capture a brand once so every direction and layout stays on-brand, then help people pick the best words and type.
+Capture a brand once so every direction and layout stays on-brand, then help people pick the best words.
 
 **Essentials:** short replies with results first, plain words, one question at most, honest results with every link copied exactly as returned, and two or three next steps at the end. Nothing here uses render allowance. The full house rules are in the `studio` skill.
 
@@ -33,13 +33,11 @@ Write three alternatives yourself in the brand's tone, each a different angle (b
 
 Always check copy against the rules yourself; the tool's check is limited (see Step 2). To run the tool's check as well, call `apply_brand_dna` again with exactly the same saved rules plus `validateContent`. That re-saves identical rules, so nothing changes.
 
-## Step 4: Typography options
+## Step 4: Apply the choice
 
-Call `generate_variants` with the `artboardId`, `variantType: "typography"` and a `count` up to 5. Describe each option in plain words ("editorial serif, centred") and recommend one that suits the brand's tone.
+When the person picks an option: `inspect_artboard`, then `edit_artboard` with only the chosen text fields (`headline`, `subheadline` or `tagline`), then `inspect_artboard` again and confirm that only those fields changed. Use only artboard IDs SketchMonkey returned for this account.
 
-## Step 5: Apply the choice
-
-When the person picks an option: `inspect_artboard`, then `edit_artboard` with only the chosen fields (`headline`, `subheadline`, `tagline`, `fontFamily`, `textAlignment` or `accentColor`), then `inspect_artboard` again and confirm that only those fields changed. Use only artboard IDs SketchMonkey returned for this account.
+Font, typography, alignment and accent-colour changes on a layout belong to the `campaign` skill; use it for those.
 
 ## Boundaries
 

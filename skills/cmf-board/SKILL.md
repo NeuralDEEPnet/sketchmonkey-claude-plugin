@@ -38,7 +38,7 @@ Then add one line on why it works and one practical note (wear, fingerprints, cl
 
 ## Step 4: Show the materials (optional, uses renders)
 
-Offer a visual: a detail close-up of the hero material or a colourway line-up of the product (see the `product-shots` recipes). One render each; confirm first.
+Offer a visual: a detail render of the hero material or a CMF variant render of the product (see the `presentation-renders` recipes). One render each; confirm first.
 
 ## Exports
 

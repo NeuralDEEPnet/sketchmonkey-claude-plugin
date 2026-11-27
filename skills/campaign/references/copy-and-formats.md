@@ -12,7 +12,7 @@
 | Question (sparingly) | Ready for Slower Mornings? |
 
 Rules of thumb:
-- Seven words or fewer; under five for the story format.
+- Seven words or fewer; under five for the vertical format.
 - One idea per headline. Put the details in the subheadline.
 - Title Case or sentence case consistently across all formats in a campaign.
 - Avoid unverifiable superlatives ("best", "world's first") and any claim the product can't back up.
@@ -23,7 +23,7 @@ One line, about 8 to 14 words, carrying the most persuasive fact: the material, 
 
 ## Body text
 
-One or two sentences, about 15 to 35 words, in plain language: what the product is, what it's made of and who it's for, or a launch detail such as availability. Only use prices, dates and claims the person gave you. Every format starts with placeholder body text, so replace it on every layout: the A4 poster has room for two or three sentences, while the square, story and banner formats need one short sentence.
+One or two sentences, about 15 to 35 words, in plain language: what the product is, what it's made of and who it's for, or a launch detail such as availability. Only use prices, dates and claims the person gave you. Every format starts with placeholder body text, so replace it on every layout: the A4 poster has room for two or three sentences, while the square, vertical and banner formats need one short sentence.
 
 ## Taglines and calls to action
 
@@ -37,8 +37,8 @@ One or two sentences, about 15 to 35 words, in plain language: what the product 
 | Format | Notes |
 |---|---|
 | A4 poster | Room for a headline, a subheadline and a short body paragraph. Works printed, so keep body text to two or three sentences. |
-| Square | Seen small in feeds. Lead with the headline and product; keep the body to one short sentence, since it sits small at the bottom. |
-| Story | Keep text clear of the top 14% and bottom 20%, where app controls sit. Shortest headline. |
+| Square | Often seen small. Lead with the headline and product; keep the body to one short sentence, since it sits small at the bottom. |
+| Vertical (9:16) | Keep text clear of the top 14% and bottom 20%, where phone interface controls can sit. Shortest headline. |
 | Banner | Wide and shallow. Headline on one line if possible; keep the product on the opposite side from the text. |
 | CMF sheet | Headline is the colourway or collection name; subheadline lists the key materials. |
 

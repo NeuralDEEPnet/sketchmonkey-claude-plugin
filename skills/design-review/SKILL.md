@@ -1,17 +1,19 @@
 ---
 name: design-review
-description: Gives a structured, studio-style design critique of a product or vehicle, from a render, sketch, photo or a design described only in words, covering proportion, form, surfaces, details, colour-material-finish, ergonomics, early manufacturability flags and fit to the brief, and keeps it to the three changes that matter most. Use whenever someone asks for a critique, review, feedback or a second opinion on a product, vehicle or concept design, even when nothing should be rendered and even if they don't mention SketchMonkey, for example 'critique this design', 'what would a senior designer change here', 'is this concept any good', 'review my sketch', 'why does this car look off' or 'crit our concept before we show the client'.
+description: Gives a structured, studio-style design review of a design being made with SketchMonkey (a product, vehicle, pack or space), from a SketchMonkey render or from the sketch or description the SketchMonkey work is based on, covering proportion, form, surfaces, details, colour-material-finish, ergonomics, early manufacturability flags and fit to the brief, and keeps it to the three changes that matter most. Use only for reviews of designs in a SketchMonkey workflow, for example 'review my SketchMonkey concept', 'what would a senior designer change in this SketchMonkey render', 'crit our SketchMonkey concept before we show the client' or 'why does the car we rendered in SketchMonkey look off'. Not for general critiques of designs made elsewhere.
 ---
 
 # Design review
 
-Review a design the way a good studio lead would: specific, kind, and focused on the few changes that matter most. Reviews are free; only the optional corrected render or edit uses allowance.
+Review a design the way a good studio lead would: specific, kind, and focused on the few changes that matter most. Reviews are free; only the optional corrected render uses allowance.
+
+This skill is for designs being made with SketchMonkey. If someone wants a critique of something that isn't part of their SketchMonkey work, this skill doesn't apply.
 
 **Essentials:** short replies with results first, plain words, one question at most, honest results with every link copied exactly as returned, and two or three next steps at the end. The full house rules are in the `studio` skill.
 
 ## Step 1: Know what you're reviewing
 
-You need the design (a SketchMonkey render from this conversation, an image the person shares, or a description in words; say a description-only review can't judge surfaces or exact proportions) and the intent (the brief, or one sentence on who it's for). If the intent is missing, ask for it in one question; a review without a brief is only taste.
+You need the design (a SketchMonkey render from this conversation or the person's account, or the sketch or written description their SketchMonkey work starts from; say a description-only review can't judge surfaces or exact proportions) and the intent (the brief, or one sentence on who it's for). If the intent is missing, ask for it in one question; a review without a brief is only taste.
 
 ## Step 2: Look properly
 
@@ -33,10 +35,7 @@ Score only if the person asks; then use 1 to 5 per lens with one line of evidenc
 
 ## Step 4: Turn fixes into images (optional, uses allowance)
 
-Offer to apply the top change, or all three:
-
-- **The design is a SketchMonkey render or concept:** rewrite its prompt with the changes and render once with `render_concept` (`autoEnhance: false`, same `preset` and `aspectRatio` as before). If the product is saved and the change leaves its saved traits alone, also pass `subjectModelId`. If the change touches a saved trait (for example a proportion or the stance), the saved model would hold the old design in place, so render without `subjectModelId`, say so, and offer to save the corrected render as a new reference afterwards. Show before and after side by side.
-- **The design is a real product photo and the change is local** (colour, a part's size, the background): hand over to `photo-edit`, which keeps everything else unchanged.
+Offer to apply the top change, or all three: rewrite the design's prompt with the changes (or write one from the sketch or description, the way the matching design skill does) and render once with `render_concept` (`autoEnhance: false`, same `preset` and `aspectRatio` as before). If the product is saved and the change leaves its saved traits alone, also pass `subjectModelId`. If the change touches a saved trait (for example a proportion or the stance), the saved model would hold the old design in place, so render without `subjectModelId`, say so, and offer to save the corrected render as a new reference afterwards. Show before and after side by side.
 
 Look at the new image and say honestly whether each change landed.
 

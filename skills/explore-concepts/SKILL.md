@@ -1,11 +1,11 @@
 ---
 name: explore-concepts
-description: Explores new product ideas through SketchMonkey's five design lenses (Ren, Maya, Kai, Zola, Nova) and renders the favourite directions as concept images. Use whenever someone asks for design directions, concepts or ideas for a physical product, even if they don't mention SketchMonkey, for example 'design a desk lamp', 'explore five design directions for a smart speaker', 'what could my water bottle look like', 'concept sketches for a kettle' or 'render it in the Nova style'.
+description: Explores new ideas for a physical product through SketchMonkey's five design lenses (Ren, Maya, Kai, Zola, Nova) and renders the favourite directions as concept images. For physical products only, not vehicles, packaging or spaces, which have their own skills (transport-design, packaging-design, spatial-design). Use when someone asks SketchMonkey for design directions or concepts for a physical product, for example 'design a desk lamp in SketchMonkey', 'explore five SketchMonkey design directions for a smart speaker', 'show me SketchMonkey concepts for my water bottle' or 'render it in the Nova style'.
 ---
 
 # Explore concepts
 
-Help people see what their product idea could become, compare directions side by side, and render the ones they love.
+Help people see what their product idea could become, compare directions side by side, and render the ones they love. This skill is for physical products; use `transport-design` for vehicles, `packaging-design` for packs and `spatial-design` for stands, shops and rooms.
 
 **Essentials:** short replies with results first, plain words, one question at most, honest results with every link copied exactly as returned, and two or three next steps at the end. Exploring directions is free; each concept render uses one image render, so confirm before more than four. The full house rules are in the `studio` skill.
 
@@ -42,7 +42,7 @@ Call `render_concept` with:
 - `prompt`: the prompt above.
 - `preset`: the lens ID (`ren`, `maya`, `kai`, `zola` or `nova`). The preset adds its own style words at render time: `nova` deliberately adds glitch-art and surreal effects, and `maya` asks for product UI/UX detail, which can add screen-like artefacts such as QR codes on physical products. If the person wants the clean look of the Nova or Maya direction rather than that render style, use `preset: "ren"` (or `"kai"`), describe the direction's design language in the prompt, and say that you did.
 - `autoEnhance: false`, because the prompt is complete.
-- `aspectRatio`: `1:1` for most objects, `16:9` for vehicles and wide products, `3:4` for tall products. For `1:1`, also write "square 1:1 format" in the prompt; the server only adds ratio wording for non-square images.
+- `aspectRatio`: `1:1` for most objects, `16:9` for wide products, `3:4` for tall products. For `1:1`, also write "square 1:1 format" in the prompt; the server only adds ratio wording for non-square images.
 
 Quick alternative when the person just wants a fast look: send their plain brief with the lens `preset` and leave `autoEnhance` on. Never send text from `enhance_prompt` with `autoEnhance` on; that enhances it twice.
 
@@ -58,8 +58,9 @@ Offer the next steps that fit:
 - Refine the favourite: a different colourway, a material swap, another angle or a detail close-up.
 - Mix lenses ("Ren's precision with Maya's soft grip"), written into a new prompt.
 - Build a colour, material and finish board (`cmf-board`).
-- Make polished product shots of the chosen concept (`product-shots`).
-- Launch posters and social layouts (`campaign`), or a 360° spin (`turnaround-video`).
+- Make presentation renders of the chosen concept for a design review (`presentation-renders`).
+- Get a studio-style review of the concept (`design-review`).
+- Set the concept into launch layouts with editable type (`campaign`).
 
 Save work only when the person wants to keep it or continue into a board or campaign. Then call `create_project` with a short `name` and the `brief`, and use the returned `projectId` from then on.
 

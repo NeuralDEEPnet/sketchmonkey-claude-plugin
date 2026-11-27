@@ -30,7 +30,7 @@ Use these to describe each lens in plain words, to mix lenses, and to write rend
 - **Lighting:** rim-lit infinity cove with long gradient reflections.
 - **Best for:** beauty, fragrance, watches, premium packaging, flagship devices.
 - **Prompt phrases:** "premium retail presentation", "flawless reflections", "precise metallic accents".
-- **As a render preset:** adds "polished, brand-ready commercial image". The safest preset for product photography.
+- **As a render preset:** adds "polished, brand-ready commercial image". The safest preset for clean presentation renders.
 
 ## Zola · dramatic and sculptural
 - **Feeling:** bold, editorial, a statement object.

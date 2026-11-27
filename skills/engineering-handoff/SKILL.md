@@ -1,6 +1,6 @@
 ---
 name: engineering-handoff
-description: Turns an approved SketchMonkey concept into a design-intent brief for engineers, CAD modellers and manufacturers, with overall dimensions, a part list, material and process per part, finishes, parting lines and draft, assembly notes, compliance topics to check and open questions, and hands it on to a CAD tool when one is connected. Use for requests like 'prepare this for engineering', 'what do I send to a manufacturer', 'make a spec for my factory', 'how would this be made', 'design handoff' or 'get this ready for CAD'.
+description: Turns an approved SketchMonkey concept into a design-intent brief for engineers, CAD modellers and manufacturers, with overall dimensions, a part list, material and process per part, finishes, parting lines and draft, assembly notes, compliance topics to check and open questions. Use for requests like 'prepare this for engineering', 'what do I send to a manufacturer', 'make a spec for my factory', 'how would this be made', 'design handoff' or 'get this ready for CAD'.
 ---
 
 # Engineering handoff
@@ -33,9 +33,9 @@ Use these sections. Keep numbers as targets and mark each as "target" or "to con
 
 Show a short summary in the chat (overview, part table, top three open questions) and offer the full handoff brief as a document the person can keep or send.
 
-## Step 3: Hand on to CAD, if available
+## Step 3: Finish the handoff
 
-If a CAD or 3D connector is connected in this conversation (for example 3DJ for parametric CAD, drawings and STEP or STL exports), offer to pass the handoff brief to it: overall dimensions, part list and the approved image link. Follow that connector's own instructions and present its results separately from SketchMonkey's. If none is connected, say the handoff brief is ready for any CAD modeller or engineering partner.
+Say the handoff brief is ready for any CAD modeller or engineering partner. Don't pass it to another tool yourself. Only if the person asks for help with a CAD tool, help them prepare what it needs from the brief: overall dimensions, the part list and the approved image link.
 
 ## Boundaries
 

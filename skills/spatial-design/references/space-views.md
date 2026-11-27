@@ -27,7 +27,7 @@ Each recipe gives the camera and light part of the prompt. Put the full space sp
 
 ## Shops and showrooms
 
-- Eye level from the door is the hero. Add "straight verticals, architectural photography".
+- Eye level from the door is the hero. Add "straight verticals, architectural visualisation".
 - A window view from outside at dusk makes a strong opening image: "seen from the street through the shop window at dusk".
 - For a display wall, use the elevation recipe and give the shelf count and the number of products per shelf.
 
@@ -40,9 +40,8 @@ Each recipe gives the camera and light part of the prompt. Put the full space sp
 ## Rooms a product lives in
 
 - For a room built around one product (a speaker, a lamp, a kettle), describe the room as the space specification and the product as what is on show, with its position ("on the oak sideboard, left of centre").
-- When the product must stay exactly true to a real photo, render the room here and place the product with the `photo-edit` skill instead.
 
-## Social formats
+## Other ratios
 
-- `9:16` for stories: use the eye-level recipe with "vertical framing, floor to ceiling".
-- `3:4` for feeds: the fixture detail or a tight eye-level crop.
+- `9:16` for a tall, narrow space or a vertical campaign layout background: use the eye-level recipe with "vertical framing, floor to ceiling".
+- `3:4` for a printed board: the fixture detail or a tight eye-level crop.

@@ -1,11 +1,13 @@
 ---
 name: campaign
-description: Turns a product or brief into an editable multi-format SketchMonkey launch campaign (A4 poster, square post, 9:16 story, 16:9 banner and CMF sheet) with strong copy, and edits existing SketchMonkey layouts and artboards precisely without touching the artwork. Use for 'make a launch campaign', 'poster and Instagram versions of my product', 'a banner for my website', and for any change to a saved layout or artboard such as 'change the headline on my square artboard', 'update the tagline on the story' or 'try a serif font on the poster'.
+description: Turns a product design or brief into an editable multi-format SketchMonkey launch campaign of layouts with real type (A4 poster, square, 9:16 vertical, 16:9 banner and CMF sheet) with strong copy, and edits existing SketchMonkey layouts and artboards precisely without touching the artwork, including every font, typography, alignment and accent-colour change. Use for 'make a SketchMonkey launch campaign', 'poster and square layouts for my product launch', 'a banner layout for my website', and for any change to a saved SketchMonkey layout or artboard such as 'change the headline on my square artboard', 'update the tagline on the vertical layout', 'try a serif font on the poster' or 'show me typography options for the banner'.
 ---
 
 # Launch campaign
 
 Turn one product and one message into a consistent set of campaign layouts the person can keep editing.
+
+The deliverable here is always a layout: a design asset with editable type over a SketchMonkey design render. This skill doesn't make standalone images for social media or any other channel; a background render is only made to sit inside a layout.
 
 **Essentials:** short replies with results first, plain words, one question at most, honest results with every link copied exactly as returned, and two or three next steps at the end. Campaign layouts and text edits use no render allowance; a new background render uses one image render. The full house rules are in the `studio` skill.
 
@@ -14,9 +16,9 @@ Turn one product and one message into a consistent set of campaign layouts the p
 | Format | Size | Use it for |
 |---|---|---|
 | `poster_a4` | 1240×1754 | Print posters, flyers, PDF one-pagers |
-| `square_1x1` | 1400×1400 | Instagram and LinkedIn feed posts, marketplace banners |
-| `story_9x16` | 1080×1920 | Instagram and Facebook Stories, Reels and TikTok covers |
-| `banner_16x9` | 1920×1080 | Website heroes, YouTube, slides, email headers |
+| `square_1x1` | 1400×1400 | Square launch announcements and product cards |
+| `story_9x16` | 1080×1920 | Vertical layouts for phone screens |
+| `banner_16x9` | 1920×1080 | Website headers, slides, email headers |
 | `cmf_sheet` | 1920×1200 | Colour, material and finish presentations |
 
 If the person doesn't say which formats, make `square_1x1` and `story_9x16` and say so.
@@ -29,7 +31,7 @@ You need the product, the one message to land, the audience and, ideally, a call
 
 Layouts look best with a product image as the background. The background must be a SketchMonkey render from the person's own account:
 - Use a render from earlier in the conversation if there is one.
-- Otherwise offer to make one with the `product-shots` "dramatic key visual" or "hero" recipe, framed with space for text (one image render).
+- Otherwise offer to make one with the `presentation-renders` hero render recipe, framed with clear space on one side for the type (one image render).
 - Images from elsewhere can't be used as backgrounds.
 
 ## Step 3: Set up the project and direction
@@ -54,11 +56,11 @@ Every new layout starts with automatic placeholder text that must not reach a cu
 - **Body text:** one or two plain sentences about the product, or the person's own details such as price or availability if they gave them.
 - **Tagline:** the brand or product name, or the call to action. Never leave the "NEURAL DEEP" placeholder.
 
-Show the copy, then for each artboard: `inspect_artboard`, `edit_artboard` with `headline`, `subheadline`, `bodyText` and `tagline`, then `inspect_artboard` again to confirm the four fields changed and the artwork, font and colours didn't. Shorten the headline for the story format if needed.
+Show the copy, then for each artboard: `inspect_artboard`, `edit_artboard` with `headline`, `subheadline`, `bodyText` and `tagline`, then `inspect_artboard` again to confirm the four fields changed and the artwork, font and colours didn't. Shorten the headline for the vertical format if needed.
 
 ## Step 6: Present
 
-List each layout with its format, size and headline, and say it's saved in their SketchMonkey project. Offer next steps: try another font or accent colour, write alternative headlines (`brand-kit` keeps them on-brand), add a format, or make a 360° video for the story (`turnaround-video`).
+List each layout with its format, size and headline, and say it's saved in their SketchMonkey project. Offer next steps: try another font or accent colour, write alternative headlines (`brand-kit` keeps them on-brand), or add a format.
 
 ## Editing an existing layout
 
@@ -68,6 +70,8 @@ People can ask for precise changes at any time. Editable fields:
 - Artwork: `backgroundUrl` (a SketchMonkey render from their account).
 
 Always `inspect_artboard` first, send `edit_artboard` with only the requested fields, then `inspect_artboard` again and confirm the change and that everything else was preserved. Only edit artboards whose IDs SketchMonkey returned for this account.
+
+**Typography options.** When the person wants to compare type treatments, call `generate_variants` with the `artboardId`, `variantType: "typography"` and a `count` up to 5. Describe each option in plain words ("editorial serif, centred"), recommend one that suits the brand's tone, and apply the chosen one with `edit_artboard` as above.
 
 ## Exports
 

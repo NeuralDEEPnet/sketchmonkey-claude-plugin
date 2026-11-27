@@ -1,17 +1,17 @@
 ---
 name: spatial-design
-description: Spatial and interior design with SketchMonkey, for retail stands, pop-up shops, showrooms, exhibition booths, shop-in-shops, cafes, kitchens, studios and the rooms a product lives in. Takes a space from a written space specification (footprint, zones, fixtures, materials and light) to a consistent set of overview, eye-level, fixture detail and plan views, and on to walkthrough videos. Use for requests like 'design a pop-up shop for our candles', 'show me a trade fair stand for the launch', 'what could our showroom look like', 'a display wall for twelve mugs', 'concept for a small coffee bar' or 'design the room our speaker sits in'.
+description: Spatial and interior design with SketchMonkey, for retail stands, pop-up shops, showrooms, exhibition booths, shop-in-shops, cafes, kitchens, studios and the rooms a product lives in. Takes a space from a written space specification (footprint, zones, fixtures, materials and light) to a consistent set of overview, eye-level, fixture detail and plan views. Use for SketchMonkey space design requests like 'design a pop-up shop for our candles', 'show me a trade fair stand for the launch', 'what could our showroom look like', 'a display wall for twelve mugs', 'concept for a small coffee bar' or 'design the room our speaker sits in'.
 ---
 
 # Spatial design
 
-Help people design a space the way an interior or exhibition designer does: the footprint and the route through it first, then fixtures and materials, then light. A space that works in plan almost always works in the photographs.
+Help people design a space the way an interior or exhibition designer does: the footprint and the route through it first, then fixtures and materials, then light. A space that works in plan almost always works in the views.
 
 **Essentials:** short replies with results first, plain words, one question at most, honest results with every link copied exactly as returned, and two or three next steps at the end. Each image uses one render from the person's allowance; a full view set is four renders, so confirm before starting it. The full house rules are in the `studio` skill.
 
 ## Step 1: Write the space specification (free)
 
-Before any render, write a specification of 80 to 140 words. It plays the role the product fingerprint plays in `product-shots`, and it goes into every prompt so every view shows the same space.
+Before any render, write a specification of 80 to 140 words. It plays the role the product fingerprint plays in `presentation-renders`, and it goes into every prompt so every view shows the same space.
 
 - **Type and purpose:** what it is, who visits and what they should do there ("3 by 3 metre pop-up shop where passers-by pick up, smell and buy candles").
 - **Footprint and height:** width, depth and ceiling height in metres, which sides are open, where people enter.
@@ -69,7 +69,7 @@ Leave signs and lettering out of the renders: image models garble text. If the p
 
 ## Step 4: Keep it the same space
 
-Once the person likes the overview, offer to save the space with `save_subject_model`: `kind: "space"`, a short `name`, the specification as `identityLock`, the must-not-change traits as `immutableTraits`, and the render's `imageUrl` as `heroImageUrl`. Pass the returned ID as `subjectModelId` in later renders and videos so the studio conditions on that image. Say plainly that this improves consistency but doesn't guarantee identical results.
+Once the person likes the overview, offer to save the space with `save_subject_model`: `kind: "space"`, a short `name`, the specification as `identityLock`, the must-not-change traits as `immutableTraits`, and the render's `imageUrl` as `heroImageUrl`. Pass the returned ID as `subjectModelId` in later renders so the studio conditions on that image. Say plainly that this improves consistency but doesn't guarantee identical results.
 
 ## Step 5: Review like a studio
 
@@ -86,11 +86,11 @@ Keep the reply to one phone screen. Lead with the views; don't repeat the space 
 
 ## Step 6: Next steps
 
-- A slow walkthrough or reveal (`turnaround-video`; a `push_in` toward the counter or a `crane_arc` over the stand works better than a full orbit in a room).
+- Another view from the recipes: a back-wall elevation or a second fixture detail.
 - Material and colour options for floor, walls and fixtures (`cmf-board`).
-- Photographs of the products on show (`product-shots`), or packaging to match the stand (`packaging-design`).
+- Packaging designed to match the stand (`packaging-design`).
 - A build brief for a shopfitter or stand builder: fixture list, sizes, materials and open questions (`engineering-handoff`).
-- Opening posters and social posts (`campaign`).
+- Opening posters and banner layouts with editable type (`campaign`).
 
 ## Boundaries
 

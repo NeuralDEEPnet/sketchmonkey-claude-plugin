@@ -2,7 +2,7 @@
   "mcpServers": {
     "sketchmonkey-studio": {
       "type": "http",
-      "url": "https://sketchmonkey-neuraldeepnet.on.adaptive.ai/api/mcp"
+      "url": "https://sketchmonkey-neuraldeepnet.on.adaptive.ai/api/mcp/directory"
     }
   }
 }
