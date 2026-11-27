@@ -56,7 +56,7 @@ You need a SketchMonkey account; sign up at [sketchmonkey.design](https://www.sk
 This plugin contains no executable code. It has two parts:
 
 - **Skills:** written instructions that guide Claude through each workflow.
-- **One remote connector:** the SketchMonkey MCP server at `https://sketchmonkey-neuraldeepnet.on.adaptive.ai/api/mcp/directory`, operated by Neural Deep Network Ltd. Claude connects to it only after you sign in with OAuth 2.1 (PKCE), granting the scopes `account:read`, `creative:read`, `creative:write` and `renders:run`.
+- **One remote connector:** the SketchMonkey MCP server at `https://www.sketchmonkey.design/api/mcp/directory`, operated by Neural Deep Network Ltd. Claude connects to it only after you sign in with OAuth 2.1 (PKCE), granting the scopes `account:read`, `creative:read`, `creative:write` and `renders:run`.
 
 When you use the plugin, Claude sends SketchMonkey the design briefs, render prompts, project names, brand rules and layout edits needed for your request. SketchMonkey stores your projects, brand rules, saved design references and renders in your account. Finished renders are served from SketchMonkey's content delivery network at `https://sketchmonkey-neuraldeepnet.adaptive.ai/cdn/sketchmonkey/`. For a render, Claude sends only its written description of your design. SketchMonkey rejects sensitive personal data such as identity documents, health records, payment card numbers, credentials and real-person biometric data. Operational connector logs keep only the tool name, status, duration, an error code and a pseudonymous network hash, and are deleted after 24 hours.
 
