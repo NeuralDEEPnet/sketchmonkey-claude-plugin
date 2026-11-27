@@ -2,7 +2,6 @@
 
 ![SketchMonkey](assets/icon.png)
 
-Install in Claude Code: `/plugin install sketchmonkey --marketplace NeuralDEEPnet/sketchmonkey-claude-plugin`
 
 SketchMonkey Design Studio brings an industrial, transport, packaging and spatial design studio into Claude. Describe a product, vehicle, pack or space you are designing, share a sketch of it, or start from an idea, and Claude works with your SketchMonkey account to take the design from brief to launch layouts: explore five design directions, render concepts and full vehicle view sets, design the packaging and the stand or shop it is sold from, review designs like a studio lead, build colour-material-finish boards, prepare design-intent briefs for engineering, create design presentation renders for reviews and lay out campaign layouts with editable type. Everything is guided in plain language, so you don't need design software or design training.
 
