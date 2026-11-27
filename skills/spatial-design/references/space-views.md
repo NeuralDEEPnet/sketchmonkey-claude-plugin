@@ -40,9 +40,8 @@ Each recipe gives the camera and light part of the prompt. Put the full space sp
 ## Rooms a product lives in
 
 - For a room built around one product (a speaker, a lamp, a kettle), describe the room as the space specification and the product as what is on show, with its position ("on the oak sideboard, left of centre").
-- When the product must stay exactly true to a real photo, render the room here and place the product with the `photo-edit` skill instead.
 
-## Social formats
+## Other formats
 
-- `9:16` for stories: use the eye-level recipe with "vertical framing, floor to ceiling".
-- `3:4` for feeds: the fixture detail or a tight eye-level crop.
+- `9:16` portrait board: use the eye-level recipe with "vertical framing, floor to ceiling".
+- `3:4` portrait tile: the fixture detail or a tight eye-level crop.

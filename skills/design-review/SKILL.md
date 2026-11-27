@@ -36,7 +36,7 @@ Score only if the person asks; then use 1 to 5 per lens with one line of evidenc
 Offer to apply the top change, or all three:
 
 - **The design is a SketchMonkey render or concept:** rewrite its prompt with the changes and render once with `render_concept` (`autoEnhance: false`, same `preset` and `aspectRatio` as before). If the product is saved and the change leaves its saved traits alone, also pass `subjectModelId`. If the change touches a saved trait (for example a proportion or the stance), the saved model would hold the old design in place, so render without `subjectModelId`, say so, and offer to save the corrected render as a new reference afterwards. Show before and after side by side.
-- **The design is a real product photo and the change is local** (colour, a part's size, the background): hand over to `photo-edit`, which keeps everything else unchanged.
+- **The design is a photo or sketch the person shared:** describe the design from it as a fingerprint (see `design-views`), add the changes, and render once with `render_concept`. Say plainly that this is a new design visual, not an edit of their photo.
 
 Look at the new image and say honestly whether each change landed.
 

@@ -1,6 +1,6 @@
 ---
 name: transport-design
-description: Transport and vehicle design with SketchMonkey, for cars, motorcycles, e-bikes, scooters, trucks, buses, trains, aircraft cabins, eVTOLs, boats and small autonomous shuttles. Takes a vehicle from layout and proportions to a consistent set of side, front three-quarter, rear three-quarter, interior and detail renders, and on to turntable videos. Use for requests like 'design an electric city car', 'sketch a cafe-racer motorcycle', 'show me a tram for our city', 'interior for a sleeper train', 'concept for a two-seat eVTOL' or 'what could our e-bike look like'.
+description: Transport and vehicle design with SketchMonkey, for cars, motorcycles, e-bikes, scooters, trucks, buses, trains, aircraft cabins, eVTOLs, boats and small autonomous shuttles. Takes a vehicle from layout and proportions to a consistent set of side, front three-quarter, rear three-quarter, interior and detail renders. Use for requests like 'design an electric city car', 'sketch a cafe-racer motorcycle', 'show me a tram for our city', 'interior for a sleeper train', 'concept for a two-seat eVTOL' or 'what could our e-bike look like'.
 ---
 
 # Transport design
@@ -11,7 +11,7 @@ Help people design vehicles the way a transport design studio does: proportions 
 
 ## Step 1: Write the vehicle specification (free)
 
-Before any render, write a specification of 80 to 140 words. It plays the role the product fingerprint plays in `product-shots`, and it goes into every prompt so every view shows the same vehicle.
+Before any render, write a specification of 80 to 140 words. It plays the role the design fingerprint plays in `design-views`, and it goes into every prompt so every view shows the same vehicle.
 
 - **Type and mission:** what it is, who rides in it, where and how far ("two-seat urban electric city car for 30 km daily commutes and tight parking").
 - **Layout and drivetrain:** seats and layout (1+1, 2+2, 3 rows, cab-forward), drive (electric skateboard, mid-engine, in-wheel motors, pantograph, sail), wheels or hull or rotors.
@@ -67,7 +67,7 @@ Start all renders in the set, then poll each `jobId` with `get_job` about every 
 
 ## Step 4: Keep it the same vehicle
 
-Once the person likes a front three-quarter render, offer to save the vehicle with `save_subject_model`: `kind: "car"` (the kind SketchMonkey uses for every vehicle type), a short `name`, the specification as `identityLock`, the must-not-change traits as `immutableTraits`, and the render's `imageUrl` as `heroImageUrl`. Pass the returned ID as `subjectModelId` in later renders and videos so the studio conditions on that image. Say plainly that this improves consistency but doesn't guarantee identical results.
+Once the person likes a front three-quarter render, offer to save the vehicle with `save_subject_model`: `kind: "car"` (the kind SketchMonkey uses for every vehicle type), a short `name`, the specification as `identityLock`, the must-not-change traits as `immutableTraits`, and the render's `imageUrl` as `heroImageUrl`. Pass the returned ID as `subjectModelId` in later renders so the studio conditions on that image. Say plainly that this improves consistency but doesn't guarantee identical results.
 
 ## Step 5: Review like a studio
 
@@ -81,10 +81,9 @@ Present the set as a contact sheet: view name, one line on what it shows, and `[
 
 ## Step 6: Next steps
 
-- A 360° turntable or a smooth side-profile glide (`turnaround-video`; `cameraPreset` `industrial_turntable` or `lateral_profile`).
 - Colour and trim options: paint, cladding, wheels and interior textiles (`cmf-board`).
 - A design-intent brief for engineering or a CAD model (`engineering-handoff`).
-- Launch visuals and a reveal campaign (`campaign`).
+- A presentation board or reveal poster (`campaign`).
 
 ## Boundaries
 

@@ -1,6 +1,6 @@
 # Pack view recipes
 
-Each recipe gives the setting, light and camera part of the prompt. Put the full pack specification and the design language in front of it, and end with "Photorealistic packaging photograph, true-to-material, blank label areas, no readable text, no logos, no barcodes."
+Each recipe gives the setting, light and camera part of the prompt. Put the full pack specification and the design language in front of it, and end with "Photorealistic packaging design visualisation, true-to-material, blank label areas, no readable text, no logos, no barcodes."
 
 ## Light that makes board and print read
 
@@ -13,7 +13,7 @@ Each recipe gives the setting, light and camera part of the prompt. Put the full
 
 | View | Setting and camera part of the prompt | Ratio |
 |---|---|---|
-| Front | "Straight-on packshot of the front face, camera level with the centre of the pack, 85 mm lens, no perspective distortion, soft studio light" | `4:3` |
+| Front | "Straight-on view of the front face, camera level with the centre of the pack, 85 mm lens, no perspective distortion, soft studio light" | `4:3` |
 | Three-quarter | "Three-quarter view from slightly above showing the front, one side and the top, 70 mm lens, soft shadow" | `4:3` |
 | Open | "The pack open, lid resting beside it, the product seated in its insert, seen from 45° above, 50 mm lens" | `4:3` |
 | In context, shelf | "On a retail shelf at eye level between plain, unbranded neutral packs, slightly off-centre, shallow depth of field" | `16:9` |
@@ -31,8 +31,8 @@ Each recipe gives the setting, light and camera part of the prompt. Put the full
 - **Pouches:** add "filled and standing, soft creases at the gusset"; a flat pouch looks empty.
 - **Tins:** name the seam and lid type; metal needs "soft reflections, no harsh highlights".
 
-## Listing and social formats
+## Other formats
 
-- `1:1` marketplace image: the three-quarter recipe on a pure white background, with "square 1:1 format" in the prompt.
-- `9:16` story: the open view with "vertical framing, hands-free, pack centred in the lower two-thirds".
-- `3:4` feed: the flat lay or the detail.
+- `1:1` square tile: the three-quarter recipe on a pure white background, with "square 1:1 format" in the prompt.
+- `9:16` portrait board: the open view with "vertical framing, pack centred in the lower two-thirds".
+- `3:4` portrait tile: the flat lay or the detail.

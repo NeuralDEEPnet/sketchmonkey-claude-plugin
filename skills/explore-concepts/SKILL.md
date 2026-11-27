@@ -19,7 +19,7 @@ Call `generate_directions` with the `brief`. Nothing is saved and no allowance i
 
 Present a compact board, one block per lens, in plain words:
 
-> **🧑‍🔧 Ren · precise and engineered**
+> **Ren · precise and engineered**
 > Bead-blasted aluminium, crisp chamfers, a single signal-orange accent.
 > Palette: Matte Anthracite #18181B · Warm Off-White #F4F4F5 · Signal Orange #EA580C
 > Best if you want it to feel trustworthy and timeless.
@@ -58,10 +58,10 @@ Offer the next steps that fit:
 - Refine the favourite: a different colourway, a material swap, another angle or a detail close-up.
 - Mix lenses ("Ren's precision with Maya's soft grip"), written into a new prompt.
 - Build a colour, material and finish board (`cmf-board`).
-- Make polished product shots of the chosen concept (`product-shots`).
-- Launch posters and social layouts (`campaign`), or a 360° spin (`turnaround-video`).
+- See the chosen concept as a consistent set of views (`design-views`).
+- Get a studio review of it (`design-review`), or lay it out on a presentation board (`campaign`).
 
-Save work only when the person wants to keep it or continue into a board or campaign. Then call `create_project` with a short `name` and the `brief`, and use the returned `projectId` from then on.
+Save work only when the person wants to keep it or continue into a board or layout. Then call `create_project` with a short `name` and the `brief`, and use the returned `projectId` from then on.
 
 ## Boundaries
 
